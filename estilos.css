@@ -1,0 +1,65 @@
+* {
+  padding: 0;
+  margin: 0; 
+  font-family:Tahoma, sans-serif;
+  background-image: url(./imagenes/website-background-image-size-psd-vector-photo.jpg);
+}
+
+.caja{
+  background-color: rgb(107, 177, 238);
+  width: 400px;
+  height: 375px;
+  border: solid white;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 20px 50px;        
+}
+
+.padre{
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  align-items: center;
+  height: 100vh;
+  }
+  
+input[type = "text"], input[type = "password"] {
+  width: 82%;
+  padding: 6px 12px;
+  margin-left: 20px;
+  border-radius: 5px;
+  text-align: center;
+  border: solid white;
+  color: white;
+}
+
+input[type = "submit"]{
+  width: 90%;
+  padding: 6px 12px;
+  margin-left: 20px;
+  border-radius: 5px;
+  text-align: center;
+  border: solid white;
+  color: white;
+}
+
+
+body{
+  background-color: rgb(250, 243, 243);
+}
+
+form{
+  padding: 10px;
+  display: table;
+  color: white;
+}
+
+.inputTexto::placeholder {
+  color: white;
+  opacity: 0.4;
+}
+
+label{
+  padding: 6px 12px;
+  margin-left: 10px;
+  color: white;
+}
