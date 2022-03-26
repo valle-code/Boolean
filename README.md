@@ -1,3 +1,2 @@
-# PI_1DAM
-Repositorio para el proyecto integrador de DAM1
-8 de marzo, se finaliza la fase 2 de la documentación del proyecto integrador
+# Boolean 
+Boolean es un proyecto de primer año en Desarrollo de Aplicaciones Multiplataforma que tiene como proposito el crear un espacio en el que los usuarios puedan discutir sobre la veracidad de noticias, números de teléfono, posibles estafas, posible malware en emails etc (por eso se llama "Boolean"). El proyecto estará construido en PHP, SQL, JavaScript HTML y CSS.
