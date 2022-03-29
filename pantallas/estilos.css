@@ -49,14 +49,13 @@
   width: 100vw;
   align-items: center;
   height: 100vh;
-  }
+}
 
-  nav {
+nav {
     clear: both;
     background-color: rgba(4, 83, 255, 0.952);
     color: white;
     padding: 20px;
-    margin: 0;
     overflow: hidden;
 }
 
@@ -70,6 +69,7 @@ nav ul{
   display: inline-block;
   list-style-type: none;
   padding: 20px 30px;
+  border-radius: 12px;
 }
 
 .decBarra{
@@ -77,10 +77,32 @@ nav ul{
   color: white;
 }
 
- li:hover{
+li:hover{
   background-color: rgb(68, 137, 248);
 }
-  
+
+.wrapper{
+  /* height: 100vh;
+  width: 100vh; */
+  background-color: black;
+  padding: 0;
+  width: 100vw;
+  margin-left: auto;
+}
+
+.forumBox{
+  margin-left: 10px;
+}
+
+main{
+  height: auto;
+  width: 80vw;
+  background-color: green;
+
+  position: relative;
+  border: solid white;
+}
+
 input[type = "text"], input[type = "password"] {
   width: 82%;
   padding: 6px 12px;
@@ -88,6 +110,16 @@ input[type = "text"], input[type = "password"] {
   border-radius: 5px;
   text-align: center;
   border: solid white;
+}
+
+section {
+  display: inline-block;
+  width: 30%;
+  height: 50%;
+  border: solid black;
+  background-color: white;
+  margin: 12px;
+  border-radius: 20px;
 }
 
 input[type = "submit"]{
@@ -100,7 +132,6 @@ input[type = "submit"]{
   color: black;
 }
 
-
 body{
   background-color: rgb(250, 243, 243);
 }
@@ -108,11 +139,15 @@ body{
 form{
   padding: 10px;
   display: table;
- 
 }
 
 label{
   padding: 6px 12px;
   margin-left: 10px;
   color: white;
+}
+
+body{
+  display: flex;
+  justify-content: center;
 }
