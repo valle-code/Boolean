@@ -50,6 +50,36 @@
   align-items: center;
   height: 100vh;
   }
+
+  nav {
+    clear: both;
+    background-color: rgba(4, 83, 255, 0.952);
+    color: white;
+    padding: 20px;
+    margin: 0;
+    overflow: hidden;
+}
+
+nav ul{
+  margin: 0;
+  padding: 0;
+}
+
+.barra{
+  float: right;
+  display: inline-block;
+  list-style-type: none;
+  padding: 20px 30px;
+}
+
+.decBarra{
+  text-decoration: none;
+  color: white;
+}
+
+ li:hover{
+  background-color: rgb(68, 137, 248);
+}
   
 input[type = "text"], input[type = "password"] {
   width: 82%;
