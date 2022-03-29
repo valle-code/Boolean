@@ -1,49 +1,42 @@
 * {
   padding: 0;
-  margin: 0; 
-  font-family:Tahoma, sans-serif;
+  margin: 0;
+  font-family: Tahoma, sans-serif;
 }
-
 #container {
   background-image: url(./imagenes/website-background-image-size-psd-vector-photo_waifu2x_art_noise3_scale_tta_1.png);
 }
-
-#logcontainer{
+#logcontainer {
   background-image: url(./imagenes/website-background-image-size-psd-vector-photo_waifu2x_art_noise3_scale_tta_1.png);
 }
-
-#logcaja{
+#logcaja {
   display: flex;
   width: 400px;
   height: 440px;
   position: relative;
   border: solid white;
   border-radius: 20px;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 20px 50px;  
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 20px 50px;
 }
-
-#centrar{
+#centrar {
   margin: 0;
   position: absolute;
   justify-content: center;
   bottom: 0%;
   right: 25%;
 }
-
-#campos{
- width: 110%;
- height: 200px;
+#campos {
+  width: 110%;
+  height: 200px;
 }
-
-#caja{
+#caja {
   width: 400px;
   height: 440px;
   border: solid white;
   border-radius: 20px;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 20px 50px;        
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 20px 50px;
 }
-
-.padre{
+.padre {
   display: flex;
   justify-content: center;
   width: 100vw;
@@ -51,59 +44,75 @@
   height: 100vh;
 }
 
+.navegacion {
+  height: 12%;
+  display: flex;
+  align-items: center;
+}
 nav {
-    clear: both;
-    background-color: rgba(4, 83, 255, 0.952);
-    color: white;
-    padding: 20px;
-    overflow: hidden;
-}
-
-nav ul{
-  margin: 0;
-  padding: 0;
-}
-
-.barra{
-  float: right;
-  display: inline-block;
-  list-style-type: none;
-  padding: 20px 30px;
-  border-radius: 12px;
-}
-
-.decBarra{
-  text-decoration: none;
+  flex: 1;
+  text-align: right;
   color: white;
 }
 
-li:hover{
-  background-color: rgb(68, 137, 248);
+nav ul li {
+  list-style: none;
+  margin-left: 70px;
+  display: inline-block;
 }
 
-.wrapper{
-  /* height: 100vh;
-  width: 100vh; */
-  background-color: black;
-  padding: 0;
-  width: 100vw;
-  margin-left: auto;
+.logo {
+  width: 100px;
+  cursor: pointer;
 }
 
-.forumBox{
+.barra {
+  border-radius: 10px;
+  padding: 30px;
+}
+
+li:hover {
+  background-color: rgba(64, 0, 255, 0.301);
+}
+
+.decBarra {
+  text-decoration: none;
+  color: white;
+  font-size: 15px;
+}
+
+.contenedor {
+  width: 100%;
+  background-image: url(./imagenes/website-background-image-size-psd-vector-photo_waifu2x_art_noise3_scale_tta_1.png);
+  background-position: center;
+  background-size: cover;
+  padding-left: 8%;
+  padding-right: 8%;
+  box-sizing: border-box;
+}
+
+li:hover {
+  background-color: rgba(86, 68, 248, 0.178);
+}
+
+.forumBox {
   margin-left: 10px;
 }
 
-main{
-  height: auto;
-  width: 80vw;
-  background-color: green;
-
-  position: relative;
-  border: solid white;
+main {
+  display: flex;  
+  align-items: center;
+  height: 80%;
 }
 
-input[type = "text"], input[type = "password"] {
+.columna {
+  flex-basis: 50%;
+  margin: 60px;
+  padding: 10px;
+}
+
+input[type="text"],
+input[type="password"] {
   width: 82%;
   padding: 6px 12px;
   margin-left: 20px;
@@ -112,17 +121,79 @@ input[type = "text"], input[type = "password"] {
   border: solid white;
 }
 
-section {
-  display: inline-block;
-  width: 30%;
-  height: 50%;
-  border: solid black;
-  background-color: white;
-  margin: 12px;
-  border-radius: 20px;
+#boolean{
+  color: white;
+  font-size: 100px;
 }
 
-input[type = "submit"]{
+#parrafo1{
+  color: white;
+  font-size: 12px;
+  line-height: 15px;
+}
+
+#button{
+  width: 190px;
+  background-color: white;
+  color: black;
+  font-size: 12px;
+  padding: 13px;
+  border-radius: 20px;
+  outline: none;
+  margin-top: 30px;
+}
+
+.contBuscar{
+  display: flex;
+  justify-content: flex-end;
+  align-items: right;
+  border: none;
+}
+
+#buscar{
+  width: 190px;
+  background-color: white;
+  color: black;
+  font-size: 12px;
+  padding: 13px;
+  border-radius: 20px;
+  outline: none;
+}
+
+.wrapper{
+    display: inline-block;
+    cursor: pointer;
+    width: 200px;
+    height: 300px;  
+    border-radius: 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    margin: 10px 15px;
+    background-image: url("./imagenes/descarga.jpg");
+    background-position: center;
+    background-size: cover;
+    transition: 0.5s;
+}
+
+#wrapper1{}
+#wrapper2{}
+#wrapper3{}
+#wrapper4{}
+
+.wrapper:hover{
+  transform: translateY(-10px);
+}
+
+h5{
+  font-size: 25px;
+  color: white;
+}
+
+.wrapper p{
+  color: white;
+}
+
+input[type="submit"] {
   width: 90%;
   padding: 6px 12px;
   margin-left: 20px;
@@ -132,22 +203,22 @@ input[type = "submit"]{
   color: black;
 }
 
-body{
+body {
   background-color: rgb(250, 243, 243);
 }
 
-form{
+form {
   padding: 10px;
   display: table;
 }
 
-label{
+label {
   padding: 6px 12px;
   margin-left: 10px;
   color: white;
 }
 
-body{
+body {
   display: flex;
   justify-content: center;
 }
