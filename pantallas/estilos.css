@@ -9,15 +9,24 @@
 #logcontainer {
   background-image: url(./imagenes/website-background-image-size-psd-vector-photo_waifu2x_art_noise3_scale_tta_1.png);
 }
+
 #logcaja {
   display: flex;
   width: 400px;
   height: 440px;
-  position: relative;
+  position: absolute;
   border: solid white;
   border-radius: 20px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 20px 50px;
 }
+
+#contcontainer {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
 #centrar {
   margin: 0;
   position: absolute;
@@ -36,11 +45,21 @@
   border-radius: 20px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 20px 50px;
 }
+
+#mensaje {
+  width: 82%;
+  padding: 6px 12px;
+  margin-left: 20px;
+  border-radius: 5px;
+  text-align: left;
+  height: 150px;
+  padding: 10px;
+}
 .padre {
   display: flex;
   justify-content: center;
-  width: 100vw;
   align-items: center;
+  width: 100vw;
   height: 100vh;
 }
 
@@ -79,6 +98,16 @@ li:hover {
   text-decoration: none;
   color: white;
   font-size: 15px;
+}
+
+#contenedorId{
+  width: 100%;
+  background-image: url(./imagenes/website-background-image-size-psd-vector-photo_waifu2x_art_noise3_scale_tta_1.png);
+  background-position: center;
+  background-size: cover;
+  padding-left: 8%;
+  padding-right: 8%;
+  box-sizing: border-box;
 }
 
 .contenedor {

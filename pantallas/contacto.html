@@ -1,12 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="estilos.css" title="style" />
+    <title>Contacto</title>
 </head>
+
 <body>
-    
+    <!--Barra de navegación-->
+    <div id = "contenedorId">
+        <div class="navegacion">
+            <img src="./imagenes/LogoDani-02.png" class="logo" />
+            <nav>
+                <ul>
+                    <li class="barra">
+                        <a href="./noticias.html" class="decBarra">Noticias</a>
+                    </li>
+                    <li class="barra">
+                        <a href="./foros.html" class="decBarra">Foros</a>
+                    </li>
+                    <li class="barra">
+                        <a href="./perfil.html" class="decBarra">Perfil</a>
+                    </li>
+                    <li class="barra">
+                        <a href="./contacto.html" class="decBarra">Contacto</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <!---->
+        <div id = "contcontainer">
+            <div class = "padre">
+              <div id = "logcaja">
+                <form action="#" method="post">
+                    <div id = "campos">
+                        <label for>Email:</label>
+                        <input type="text" name="logemail" id="contEmail" class = "cotEmail" required = "required" paceholder = "Tu email"/></form><br><br>
+                        <label>Mensaje:</label>
+                        <input type="text" name="mensaje" id="mensaje" required = "required" placeholder = "Escribe tu mensaje..."/><br><br>
+                        <input type="submit" name="contenviar" id="contenviar" value = "Enviar">
+                    </div>  
+                </form>
+               </div>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>
