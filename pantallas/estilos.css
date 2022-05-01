@@ -3,9 +3,11 @@
   margin: 0;
   font-family: Tahoma, sans-serif;
 }
+
 #container {
   background-image: url(./imagenes/website-background-image-size-psd-vector-photo_waifu2x_art_noise3_scale_tta_1.png);
 }
+
 #logcontainer {
   background-image: url(./imagenes/website-background-image-size-psd-vector-photo_waifu2x_art_noise3_scale_tta_1.png);
 }
@@ -204,11 +206,6 @@ input[type="password"] {
     transition: 0.5s;
 }
 
-#wrapper1{}
-#wrapper2{}
-#wrapper3{}
-#wrapper4{}
-
 .wrapper:hover{
   transform: translateY(-10px);
 }
@@ -250,4 +247,56 @@ label {
 body {
   display: flex;
   justify-content: center;
+}
+
+.responsive {
+  background-image: url(./imagenes/website-background-image-size-psd-vector-photo.jpg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* .imgwrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30%;
+  position: relative;
+} */
+
+.perfil{
+  color:rgb(255, 255, 255);
+  width: 30%;
+  height: 60%;
+  border: 5px solid white;
+  border-radius: 20px;
+  background-position: center;
+  background-size: cover;
+  box-sizing: border-box;
+}
+
+.imgPerfil{
+  border-radius: 100%;
+  border: 4px solid white;
+}
+
+.perfil-img{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 40%;
+  background-position: center;
+  background-size: cover;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.input {
+  width: 88%;
+}
+
+#guardar {
+  width: 88%;
 }
