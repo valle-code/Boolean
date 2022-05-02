@@ -3,9 +3,11 @@
   margin: 0;
   font-family: Tahoma, sans-serif;
 }
+
 #container {
   background-image: url(./imagenes/website-background-image-size-psd-vector-photo_waifu2x_art_noise3_scale_tta_1.png);
 }
+
 #logcontainer {
   background-image: url(./imagenes/website-background-image-size-psd-vector-photo_waifu2x_art_noise3_scale_tta_1.png);
 }
@@ -361,5 +363,6 @@ textarea {
   width: 87%;
   margin-right: 0;
 }
+
 
 
