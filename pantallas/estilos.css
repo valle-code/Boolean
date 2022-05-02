@@ -204,11 +204,6 @@ input[type="password"] {
     transition: 0.5s;
 }
 
-#wrapper1{}
-#wrapper2{}
-#wrapper3{}
-#wrapper4{}
-
 .wrapper:hover{
   transform: translateY(-10px);
 }
@@ -251,3 +246,120 @@ body {
   display: flex;
   justify-content: center;
 }
+
+.responsive {
+  background-image: url(./imagenes/website-background-image-size-psd-vector-photo.jpg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* .imgwrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30%;
+  position: relative;
+} */
+
+.perfil{
+  color:rgb(255, 255, 255);
+  width: 30%;
+  height: 60%;
+  border: 5px solid white;
+  border-radius: 20px;
+  background-position: center;
+  background-size: cover;
+  box-sizing: border-box;
+}
+
+.imgPerfil{
+  border-radius: 100%;
+  border: 4px solid white;
+}
+
+.perfil-img{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 40%;
+  background-position: center;
+  background-size: cover;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.input {
+  width: 88%;
+}
+
+#guardar {
+  width: 88%;
+}
+
+.fondo{
+  background-image: url(./imagenes/website-background-image-size-psd-vector-photo_waifu2x_art_noise3_scale_tta_1.png);
+  background-position: center;
+  background-size: cover;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.foro {
+  color: rgb(255, 255, 255);
+  
+  background-position: center;
+  background-size: cover;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  height: 80%;
+}
+
+#grupo1 {
+  background-color: rgba(168, 212, 247, 0.432);
+  padding: 2%;
+}
+
+#grupo2 {
+  background-color: rgba(168, 212, 247, 0.432);
+  padding: 2%;
+}
+
+
+h2 {
+  color: rgb(255, 255, 255);
+  font-size: 30px;
+}
+
+h1 {
+  color: rgb(255, 255, 255);
+  font-size: 40px;
+}
+
+textarea {
+  width: 82%;
+  padding: 6px 12px;
+  margin-left: 20px;
+  border-radius: 5px;
+  border: solid white;
+}
+
+.grupo {
+  border-radius: 5px;
+}
+
+#aceptar {
+  width: 87%;
+  margin-right: 0;
+}
+
+
