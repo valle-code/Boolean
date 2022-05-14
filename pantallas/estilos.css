@@ -115,7 +115,7 @@ li:hover {
 .contenedor {
   width: 100%;
   background-image: url(./imagenes/website-background-image-size-psd-vector-photo_waifu2x_art_noise3_scale_tta_1.png);
-  background-position: center;
+  
   background-size: cover;
   padding-left: 8%;
   padding-right: 8%;
@@ -137,6 +137,7 @@ main {
 }
 
 .columna {
+  flex: 1;
   flex-basis: 50%;
   margin: 60px;
   padding: 10px;
@@ -200,7 +201,7 @@ input[type="password"] {
     padding: 15px;
     box-sizing: border-box;
     margin: 10px 15px;
-    background-image: url("./imagenes/descarga.jpg");
+    background-image: url("./imagenes/istockphoto-462155265-612x612.jpg");
     background-position: center;
     background-size: cover;
     transition: 0.5s;
