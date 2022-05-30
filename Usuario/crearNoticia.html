@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="estilos.css" title="style" />
+    <script src="../Logica/validacionCrear.js"></script>
     <title>Crea tu foro</title>
   </head>
   <body>
@@ -18,10 +19,16 @@
             <div class="caja" id="caja1">
               <h2>Título</h2>
               <br>
-              <input type="text" name="nombre" placeholder="Nombre del foro..." required maxlength="20"/>
+              <input type="text" name="nombre" id = "nombre" placeholder="Nombre del foro..." required maxlength="20"/>
+              <div class="aviso">
+                <p class = "warning" id = "warning1"></p>
+              </div><br>
               <h2>Contenido</h2>
               <br>
-              <textarea id="descripcion" name ="descripcion" rows="4" cols="50" placeholder="Contenido" maxlength="3000"></textarea><br><br><br>
+              <textarea id="descripcion" name ="descripcion" name = "descripcion" rows="4" cols="50" placeholder="Contenido" maxlength="3000"></textarea><br><br><br>
+              <div class="aviso">
+                <p class = "warning" id = "warning1"></p>
+              </div>
             </div>
           </div>
           <br><br><br>
@@ -29,16 +36,25 @@
             <h1>Información del administrador</h1>
             <br>
             <div class="caja" id="caja3">
-              <h2>Email</h2>
+              <h2>Foto</h2>
               <br>
-              <input type="text" name="categoria" placeholder="Tu email..." required/><br>
+              <input type="file" name="file" name = "file" placeholder="Tu email..." required/><br>
+              <div class="aviso">
+                <p class = "warning" id = "warning1"></p>
+              </div><br>
             </div>
             <div class="caja" id="caja4">
               <h2>Autor</h2>
               <br>
-              <input type="text" name="subcategoria" placeholder="Tu nombre" required maxlength="20"/><br><br>
+              <input type="text" name="autor" id = "autor" placeholder="Tu nombre" required maxlength="20"/><br><br>
+              <div class="aviso">
+                <p class = "warning" id = "warning1"></p>
+            </div><br>
             </div>
-            <input type="submit" name="aceptar"  id = "aceptar" value="Aceptar"/><br><br>
+            <input type="submit" name="aceptar"  id = "aceptar" value="Aceptar" onclick="checkInputs()"/><br><br>
+            <div class="aviso">
+              <p class = "warning" id = "warning6"></p>
+            </div><br>
           </div>
         </form>
       </div>
