@@ -1,0 +1,454 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: Tahoma, sans-serif;
+}
+
+
+
+#container {
+  background-image: url(./imagenes/website-background-image-size-psd-vector-photo_waifu2x_art_noise3_scale_tta_1.png);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+#logcontainer {
+  background-image: url(./imagenes/website-background-image-size-psd-vector-photo_waifu2x_art_noise3_scale_tta_1.png);
+}
+
+#logcaja {
+  display: flex;
+  width: 400px;
+  height: 440px;
+  position: absolute;
+  border: solid white;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 20px 50px;
+}
+
+.fondoNo {
+  width: 100%;
+  background-image: url(./imagenes/website-background-image-size-psd-vector-photo_waifu2x_art_noise3_scale_tta_1.png);
+  display: flex;
+  flex-direction: row;
+  flex-flow: wrap;
+  background-size: cover;
+  padding-left: 8%;
+  padding-right: 8%;
+  box-sizing: border-box;
+}
+
+#contcontainer {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+#centrar {
+  margin: 0;
+  position: absolute;
+  justify-content: center;
+  bottom: 0%;
+  right: 25%;
+}
+#campos {
+  width: 110%;
+  height: 200px;
+}
+
+body {
+  background-image: url(./imagenes/website-background-image-size-psd-vector-photo.jpg);
+}
+
+#caja {
+  width: 400px;
+  height: 440px;
+  border: solid white;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 20px 50px;
+}
+
+#mensaje {
+  width: 82%;
+  padding: 6px 12px;
+  margin-left: 20px;
+  border-radius: 5px;
+  text-align: left;
+  height: 150px;
+  padding: 10px;
+}
+.padre {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.navegacion {
+  
+  display: flex;
+  align-items: center;
+}
+
+nav {
+  flex: 1;
+  text-align: right;
+  color: white;
+}
+
+nav ul li {
+  list-style: none;
+  margin-left: 70px;
+  display: inline-block;
+}
+
+.logo {
+  width: 100px;
+  cursor: pointer;
+}
+
+.barra {
+  border-radius: 10px;
+  padding: 30px;
+}
+
+li:hover {
+  background-color: rgba(64, 0, 255, 0.301);
+}
+
+.decBarra {
+  text-decoration: none;
+  color: white;
+  font-size: 15px;
+}
+
+#contenedorId{
+  width: 100%;
+  background-image: url(./imagenes/website-background-image-size-psd-vector-photo_waifu2x_art_noise3_scale_tta_1.png);
+  background-position: center;
+  background-size: cover;
+  padding-left: 8%;
+  padding-right: 8%;
+  box-sizing: border-box;
+}
+
+.contenedor {
+  width: 100%;
+  background-image: url(./imagenes/website-background-image-size-psd-vector-photo_waifu2x_art_noise3_scale_tta_1.png);
+  display: flex;
+  flex-direction: row;
+  flex-flow: wrap;
+  background-size: cover;
+  padding-left: 8%;
+  padding-right: 8%;
+  box-sizing: border-box;
+}
+
+
+.boton{
+  width: 100%;
+  padding: 2%;
+  background-color: rgb(255, 255, 255);
+  border-radius: 30px;
+  border: none;
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.tarjeta{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+
+}
+
+.algo {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  flex-flow: wrap;
+  background-size: cover;
+  box-sizing: border-box;
+  justify-content: space-around;
+}
+
+li:hover {
+  background-color: rgba(86, 68, 248, 0.178);
+}
+
+.forumBox {
+  margin-left: 10px;
+}
+
+hastlh {
+  display: flex;  
+  flex: 1;
+  justify-content: flex-end;
+  align-items: center;
+  height: 80%;
+}
+main {
+  display: flex;  
+  flex: 1;
+  justify-content: flex-end;
+  align-items: center;
+  height: 80%;
+}
+
+#noticias {
+  width: 100%;
+  flex: 1;
+  flex-basis: 60%;
+  flex-direction: row;
+  flex-flow: wrap;
+  margin: 60px;
+  padding: 10px;
+}
+
+.columna {
+  flex: 1;
+  flex-basis: 50%;
+  margin: 60px;
+  padding: 10px;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 82%;
+  padding: 6px 12px;
+  margin-left: 20px;
+  border-radius: 5px;
+  text-align: center;
+  border: solid white;
+}
+
+#boolean{
+  color: rgb(255, 255, 255);
+  font-size: 100px;
+}
+
+#parrafo1{
+  color: white;
+  text-align: left;
+  font-size: 12px;
+  line-height: 15px;
+}
+
+#button{
+  width: 190px;
+  background-color: white;
+  color: black;
+  font-size: 12px;
+  padding: 13px;
+  border-radius: 20px;
+  outline: none;
+  margin-top: 30px;
+}
+
+.contBuscar{
+  display: flex;
+  justify-content: flex-end;
+  align-items: right;
+  border: none;
+}
+
+
+
+#buscar{
+  width: 190px;
+  background-color: white;
+  color: black;
+  font-size: 12px;
+  padding: 13px;
+  border-radius: 20px;
+  outline: none;
+}
+
+.wrapper{
+    display: inline-block;
+    cursor: pointer;
+    width: 200px;
+    height: 300px;  
+    border-radius: 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    margin: 10px 15px;
+    background-image: url("./imagenes/istockphoto-462155265-612x612.jpg");
+    background-position: center;
+    background-size: cover;
+    transition: 0.5s;
+}
+
+.wrapper:hover{
+  transform: translateY(-10px);
+}
+
+h5{
+  font-size: 25px;
+  color: white;
+}
+
+.wrapper p{
+  color: white;
+}
+
+input[type="submit"] {
+  width: 90%;
+  padding: 6px 12px;
+  margin-left: 20px;
+  border-radius: 5px;
+  text-align: center;
+  border: solid white;
+  color: black;
+}
+
+body {
+  background-color: rgb(250, 243, 243);
+}
+
+form {
+  padding: 10px;
+  display: table;
+}
+
+label {
+  padding: 6px 12px;
+  margin-left: 10px;
+  color: white;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+}
+
+.responsive {
+  background-image: url(./imagenes/website-background-image-size-psd-vector-photo.jpg);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* .imgwrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30%;
+  position: relative;
+} */
+
+.perfil{
+  color:rgb(255, 255, 255);
+  width: 30%;
+  height: 60%;
+  border: 5px solid white;
+  border-radius: 20px;
+  background-position: center;
+  background-size: cover;
+  box-sizing: border-box;
+}
+
+.imgPerfil{
+  border-radius: 100%;
+  border: 4px solid white;
+}
+
+.perfil-img{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 40%;
+  background-position: center;
+  background-size: cover;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.input {
+  width: 88%;
+}
+
+#guardar {
+  width: 88%;
+}
+
+.fondo{
+  background-image: url(./imagenes/website-background-image-size-psd-vector-photo_waifu2x_art_noise3_scale_tta_1.png);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+}
+
+.foro {
+  color: rgb(255, 255, 255);
+  
+  background-position: center;
+  background-size: cover;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  height: 80%;
+}
+
+#grupo1 {
+  background-color: rgba(168, 212, 247, 0.432);
+  padding: 2%;
+}
+
+#grupo2 {
+  background-color: rgba(168, 212, 247, 0.432);
+  padding: 2%;
+}
+
+
+h2 {
+  color: rgb(255, 255, 255);
+  font-size: 30px;
+}
+
+h1 {
+  color: rgb(255, 255, 255);
+  font-size: 40px;
+}
+
+textarea {
+  width: 82%;
+  padding: 6px 12px;
+  margin-left: 20px;
+  border-radius: 5px;
+  border: solid white;
+}
+
+.grupo {
+  border-radius: 5px;
+}
+
+#aceptar {
+  width: 87%;
+  margin-right: 0;
+}
+
+
+
