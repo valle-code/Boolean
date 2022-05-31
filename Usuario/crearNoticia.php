@@ -1,8 +1,3 @@
-<?php
-require("../Datos/conexion.php");
-$sql = "SELECT *  FROM noticia";
-$resultado = mysqli_query($conexion, $sql);
-?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -16,8 +11,8 @@ $resultado = mysqli_query($conexion, $sql);
   <body>
     <div class="fondo">
       <div class="foro">
-        <a title="atras" href="./index.php"><img src="./imagenes/icons8-atrás-100.png" alt="atrás"/></a>
-        <form action="../Logica/controladorCrear.php" method="post">
+        <a title="atras" href="./index.php"><img src="./imagenes/icons8-atrás-100.png" alt="atrás" /></a>
+        <form action="../Logica/controladorCrear.php" method="POST" enctype="multipart/form-data">
           <div class="grupo" id="grupo1">
             <h1>Información del foro</h1>
             <br>
@@ -43,7 +38,7 @@ $resultado = mysqli_query($conexion, $sql);
             <div class="caja" id="caja3">
               <h2>Foto</h2>
               <br>
-              <input type="file" name="file" name = "file" placeholder="Tu email..." required/><br>
+              <input name="archivo" id="archivo" type="file" required/><br>
               <div class="aviso">
                 <p class = "warning" id = "warning1"></p>
               </div><br>

@@ -40,7 +40,7 @@
           <div class="aviso">
             <p class = "warning" id = "warning5"></p>
           </div><br>     
-          <input type="submit" name="enviar" id="enviar" value="Registrarse" /><br><br>
+          <input type="submit" name="enviar" id="enviar" value="Registrarse" onclick="checkInputs()"/><br><br>
           <div class="aviso">
             <p class = "warning" id = "warning6"></p>
           </div> 
