@@ -1,21 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./estilos.css" type="text/css">
-  <script defer src="../Logica/validacionRegistro.js"></script>
+  <script src="../Logica/script/validacionRegistro.js"></script>
   <title>Registro</title>
 </head>
 <body>
   <div id="container">
     
     <div class="padre">
-      <a title="atras" href="./index.html"><img src="./imagenes/icons8-atrás-100.png" alt="atrás"/></a>
+      <a title="atras" href="./index.php"><img src="./imagenes/icons8-atrás-100.png" alt="atrás"/></a>
       <div id="caja">
-        <form action="#" method="post" id = "registro">
+        <form action="../Logica/controladorRegistro.php" method="post" id = "registro">
           <label for>Email:</label>
           <input type="text" name="email" id="email" class="inputTexto" required onkeydown="validarEmail()"/><br><br>
           <div class="aviso">
@@ -41,7 +40,7 @@
           <div class="aviso">
             <p class = "warning" id = "warning5"></p>
           </div><br>     
-          <input type="submit" name="boton" id="boton" value="Registrarse" onclick="checkInputs()"/><br><br>
+          <input type="submit" name="enviar" id="enviar" value="Registrarse" /><br><br>
           <div class="aviso">
             <p class = "warning" id = "warning6"></p>
           </div> 

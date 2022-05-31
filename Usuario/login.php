@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel = "stylesheet" href = "./estilos.css" type = "text/css">
-    <script src="../Logica/validacionLogin.js"></script>
+    <script src="../Logica/script/validacionLogin.js"></script>
     <title>Login</title>
 </head>
 <body>
@@ -30,7 +30,7 @@
                 </div><br><br>
             </div><br><br>
             <div id = "centrar">
-                <a title="atras" href="./index.html"><img src="./imagenes/LogoDani-02.png" alt="atrás" heigth = "200px" width = "200px"/></a>
+                <a title="atras" href="./index.php"><img src="./imagenes/LogoDani-02.png" alt="atrás" heigth = "200px" width = "200px"/></a>
             </div>
             </form>
            </div>

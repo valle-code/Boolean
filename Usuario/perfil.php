@@ -1,3 +1,11 @@
+<?php
+require("../Datos/conexion.php");
+$id = $_GET["id"];
+$sql = "SELECT * FROM usuario WHERE id = '$id'";
+$resultado = mysqli_query($conexion, $sql);
+$row = mysqli_fetch_array($resultado);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -5,16 +13,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./estilos.css" type="text/css" />
-    <script src="../Logica/validacionPerfil.js"></script>
+    <script src="../Logica/script/validacionPerfil.js"></script>
     <title>Perfil</title>
   </head>
   <body>
 
     <div class="responsive">
-      <a title="atras" href="./index.html"><img src="./imagenes/icons8-atrás-100.png" alt="atrás"/></a>
-      <div class="perfil">
-        
-          
+      <a title="atras" href="./index.php"><img src="./imagenes/icons8-atrás-100.png" alt="atrás"/></a>
+      <div class="perfil">   
             <div class="perfil-img">
               <img class = imgPerfil src="./imagenes/descarga.jpg" alt="Cambia tu imagen de perfil" />
             </div>

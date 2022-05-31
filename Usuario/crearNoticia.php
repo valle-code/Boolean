@@ -1,3 +1,8 @@
+<?php
+require("../Datos/conexion.php");
+$sql = "SELECT *  FROM noticia";
+$resultado = mysqli_query($conexion, $sql);
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -5,14 +10,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="estilos.css" title="style" />
-    <script src="../Logica/validacionCrear.js"></script>
+    <script src="../Logica/script/validacionCrear.js"></script>
     <title>Crea tu foro</title>
   </head>
   <body>
     <div class="fondo">
       <div class="foro">
-        <a title="atras" href="./index.html"><img src="./imagenes/icons8-atrás-100.png" alt="atrás"/></a>
-        <form action="#" method="post">
+        <a title="atras" href="./index.php"><img src="./imagenes/icons8-atrás-100.png" alt="atrás"/></a>
+        <form action="../Logica/controladorCrear.php" method="post">
           <div class="grupo" id="grupo1">
             <h1>Información del foro</h1>
             <br>

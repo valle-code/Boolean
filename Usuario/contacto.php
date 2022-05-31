@@ -1,6 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
 
+<!DOCTYPE html>
+<html>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,20 +14,20 @@
     <!--Barra de navegación-->
     <div id = "contenedorId">
         <div class="navegacion">
-            <a href = "./index.html"><img src="./imagenes/LogoDani-02.png" class="logo"/></a>
+            <a href = "./index.php"><img src="./imagenes/LogoDani-02.png" class="logo"/></a>
             <nav>
                 <ul>
                     <li class="barra">
-                        <a href="./index.html" class="decBarra">Home</a>
+                        <a href="./index.php" class="decBarra">Home</a>
                     </li>
                     <li class="barra">
-                        <a href="./crearNoticia.html" class="decBarra">Crear</a>
+                        <a href="./crearNoticia.php" class="decBarra">Crear</a>
                     </li>
                     <li class="barra">
-                        <a href="./perfil.html" class="decBarra">Perfil</a>
+                        <a href="./perfil.php" class="decBarra">Perfil</a>
                     </li>
                     <li class="barra">
-                        <a href="./contacto.html" class="decBarra">Contacto</a>
+                        <a href="./contacto.php" class="decBarra">Contacto</a>
                     </li>
                 </ul>
             </nav>

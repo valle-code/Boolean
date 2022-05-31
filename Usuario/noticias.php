@@ -1,5 +1,9 @@
+<?php
+require("../Datos/conexion.php");
+$sql = "SELECT *  FROM noticia";
+$resultado = mysqli_query($conexion, $sql);
+?>
 <html>
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,20 +19,20 @@
     <!--Barra de navegación-->
     <div class="contenedor">
         <div class="navegacion">
-          <a href = "./index.html"><img src="./imagenes/LogoDani-02.png" class="logo"/></a>
+          <a href = "./index.php"><img src="./imagenes/LogoDani-02.png" class="logo"/></a>
             <nav>
                 <ul>
                     <li class="barra">
-                        <a href="./noticias.html" class="decBarra">Noticias</a>
+                        <a href="./noticias.php" class="decBarra">Noticias</a>
                     </li>
                     <li class="barra">
-                        <a href="./crearNoticia.html" class="decBarra">Crear</a>
+                        <a href="./crearNoticia.php" class="decBarra">Crear</a>
                     </li>
                     <li class="barra">
-                        <a href="./perfil.html" class="decBarra">Perfil</a>
+                        <a href="./perfil.php" class="decBarra">Perfil</a>
                     </li>
                     <li class="barra">
-                        <a href="./contacto.html" class="decBarra">Contacto</a>
+                        <a href="./contacto.php" class="decBarra">Contacto</a>
                     </li>
                 </ul>
             </nav>

@@ -1,11 +1,15 @@
+<?php
+require("../Datos/conexion.php");
+$sql = "SELECT *  FROM noticia";
+$resultado = mysqli_query($conexion, $sql);
+?>
 <html>
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
     <link rel="stylesheet" type="text/css" href="estilos.css" title="style" />
-    <link href=" https://fonts.google.com/css?family=Kanit" rel = "stylesheet">
+    
     <!--favicon-->
     <link rel="shortcut icon" href="./imagenes/favicon.png" type="image/x-icon">
     <title>Home</title>
@@ -15,20 +19,20 @@
     <!--Barra de navegación-->
     <div class="contenedor">
         <div class="navegacion">
-            <a href = "./index.html"><img src="./imagenes/LogoDani-02.png" class="logo"/></a>
+            <a href = "./index.php"><img src="./imagenes/LogoDani-02.png" class="logo"/></a>
             <nav>
                 <ul>
                     <li class="barra">
-                        <a href="./noticias.html" class="decBarra">Noticias</a>
+                        <a href="./noticias.php" class="decBarra">Noticias</a>
                     </li>
                     <li class="barra">
-                        <a href="./crearNoticia.html" class="decBarra">Crear</a>
+                        <a href="./crearNoticia.php" class="decBarra">Crear</a>
                     </li>
                     <li class="barra">
-                        <a href="./perfil.html" class="decBarra">Perfil</a>
+                        <a href="./perfil.php" class="decBarra">Perfil</a>
                     </li>
                     <li class="barra">
-                        <a href="./contacto.html" class="decBarra">Contacto</a>
+                        <a href="./contacto.php" class="decBarra">Contacto</a>
                     </li>
                 </ul>
             </nav>
@@ -38,21 +42,15 @@
             <div class="columna">
                 <h1 id="boolean">Boolean</h1>
                 <p id="parrafo1">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Iaculis
-                    nunc sed augue lacus viverra. Augue eget arcu dictum varius duis at
-                    consectetur. Odio ut enim blandit volutpat. Nibh venenatis cras sed
-                    felis eget velit aliquet sagittis id. Pellentesque diam volutpat
-                    commodo sed. Sed viverra ipsum nunc aliquet bibendum enim. Morbi
-                    tristique senectus et netus et malesuada fames. Sed adipiscing diam
-                    donec adipiscing tristique risus nec. In fermentum posuere urna nec
-                    tincidunt. Eu sem integer vitae justo eget magna fermentum iaculis
-                    eu.
+                    Boolean es un sitio web en el que tratar sobre temas candentes en nuestra sociedad
+                    como pueden ser las estafas de diversos tipos. Desde el punto de vista de la
+                    información, se trata de un sitio web que se dedica a la divulgación de información
+                    sobre temas que sean de interés general.
                 </p>
                 <br><br>
                 <div id="botones">
-                    <a href="./login.html" class="boton">Iniciar sesión</a>
-                    <a href="./registro.html" class="boton">Registrarse</a>
+                    <a href="./login.php" class="boton">Iniciar sesión</a>
+                    <a href="./registro.php" class="boton">Registrarse</a>
                 </div>
             </div>
             <!--Columna derecha-->

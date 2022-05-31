@@ -5,7 +5,7 @@ function validarEmail() {
   clearTimeout(tiempo);
   tiempo = setTimeout(() => {
   checkEmail(email);
-  }, 6000);
+  }, 300);
 }
 
 function validarTexto() {
@@ -69,8 +69,8 @@ function checkTexto(texto) {
     document.getElementById("warning3").innerHTML =
       "El campo no puede contener caracteres especiales ni números";
   } else {
-    document.getElementById("warning2").innerHTML = "";
-    document.getElementById("warning3").innerHTML = "";
+    document.getElementById("warning2").innerHTML = '';
+    document.getElementById("warning3").innerHTML = '';
   }
 }
 
@@ -90,7 +90,7 @@ function checkPsw(psw) {
     }
 
     if (!valido) {
-      document.getElementById("warning4").innerHTML = "";
+      document.getElementById("warning4").innerHTML = '';
       } else {
       document.getElementById("warning4").innerHTML = "La contraseña no es valida";
     }
@@ -108,32 +108,31 @@ function checkPsw(psw) {
     var parte1;
     var parte2;
     var parte3;
-    var primerChar;
     var caracteresRaros = ["!", "#", "$", "%", "&", "/", "^", "+", "*", "_"];
     var i = 0;
-    var condicion = false;
+    var condicion = true;
     var aviso = document.getElementById("warning1");
 
     if (email.length > 0 && email.includes("@") && email.includes(".")) {
       parte1 = email.split("@")[0];
       parte2 = email.split("@")[1];
       parte3 = parte2.split(".")[0];
-      primerChar = parte1.charAt(0);
+    
       
-      if (parte1.length > 0 && parte2.length > 0 && parte3.length > 0 && parte3 == 'com' || 'es') {
-        while ( i < caracteresRaros.length && !parte1.includes(caracteresRaros[i]) && !parte2.includes(caracteresRaros[i]) && !primerChar.includes(caracteresRaros[i])) {
-          if (parte1.includes(caracteresRaros[i]) || parte2.includes(caracteresRaros[i]) || primerChar.includes(caracteresRaros[i])) {
-            condicion = true;
+      if (parte1.length > 0 && parte2.length > 0 && parte3.length > 0 && parte3 == 'com' || parte == 'es') {
+        while ( i < caracteresRaros.length && !parte1.includes(caracteresRaros[i]) && !parte2.includes(caracteresRaros[i])) {
+          if (!parte1.includes(caracteresRaros[i]) || !parte2.includes(caracteresRaros[i])) {
+            condicion = false;
           }
           i++;
         }
 
         }
     }
-    if (!condicion) {
-      aviso.innerHTML = "El email no es valido";
+    if (condicion) {
+      aviso.innerHTML = '';
     } else {
-      aviso.innerHTML = "";
+      aviso.innerHTML = "El email no es valido";
     }
   }
 
