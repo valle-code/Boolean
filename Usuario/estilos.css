@@ -370,12 +370,16 @@ body {
 
 .imgPerfil {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30%;
+  position: relative;
 }
 
 .perfil{
   color:rgb(255, 255, 255);
-  width: 20%;
-  height: 65%;
+  width: 25%;
+  height: 75%;
   border: 5px solid white;
   border-radius: 20px;
   background-position: center;
@@ -392,7 +396,6 @@ body {
   display: flex;
   justify-content: center;
   width: 100%;
-  height: 40%;
   background-position: center;
   background-size: cover;
   box-sizing: border-box;
@@ -419,7 +422,6 @@ body {
 
 .foro {
   color: rgb(255, 255, 255);
-  
   background-position: center;
   background-size: cover;
   box-sizing: border-box;

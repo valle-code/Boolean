@@ -1,11 +1,3 @@
-<?php
-require("../Datos/conexion.php");
-$id = $_GET["id"];
-$sql = "SELECT * FROM usuario WHERE id = '$id'";
-$resultado = mysqli_query($conexion, $sql);
-$row = mysqli_fetch_array($resultado);
-?>
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -24,7 +16,7 @@ $row = mysqli_fetch_array($resultado);
             <div class="perfil-img">
               <img class = imgPerfil src="./imagenes/descarga.jpg" alt="Cambia tu imagen de perfil" />
             </div>
-          <form>
+          <form action = "../Logica/controladorPerfil.php" method="POST" enctype="multipart/form-data">
             <div class="perfil-info">
               <label for>Nombre</label>
               <input type="text" name="nombre" id="nombre" class = "input" placeholder="Nombre" required onkeyup = "validarTexto()"/><br><br>
@@ -40,7 +32,7 @@ $row = mysqli_fetch_array($resultado);
               <div class="lol">
                 <input type="file" name="foto" id="foto" class = "input"/>
               </div><br><br>
-              <input type="submit" value="Guardar" id = "guardar" required onclick = "checkInputs()"/><br><br>
+              <input type="submit" value="Guardar" id = "guardar" name = "guardar" onclick = "checkInputs()"/><br><br>
               <div class="aviso">
                 <p class = "warning" id = "warning6"></p>
               </div><br>

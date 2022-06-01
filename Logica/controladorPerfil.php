@@ -1,21 +1,16 @@
 <?php
 require("../Datos/conexion.php");
-
-//Si se quiere subir una imagen
-if (isset($_POST['aceptar'])) {
-    $titulo = $_POST['nombre'];
-    $descripcion = $_POST['descripcion'];
-    $autor = $_POST['autor'];
-    $archivo_nombre = $_FILES['archivo']['name'];
-
+    $id = 6;
+    $nombre = $_POST['nombre'];
+    $apellidos = $_POST['apellido'];
+    $archivo_nombre = $_FILES['foto']['name'];
     if (isset($archivo_nombre) && $archivo_nombre != "") {
-        $tipo = $_FILES['archivo']['type'];
-        $temp = $_FILES['archivo']['tmp_name'];
-        $ruta = "../Usuario/Resources/Noticias/".$titulo ."/";
+        $tipo = $_FILES['foto']['type'];
+        $temp = $_FILES['foto']['tmp_name'];
+        $ruta = "../Usuario/Resources/Usuarios/".$nombre ."/";
         $rutaDestino = $ruta . $archivo_nombre;
-
         if (!((strpos($tipo, "gif") || strpos($tipo, "jpeg") || strpos($tipo, "jpg") || strpos($tipo, "png")))) {
-            echo '<div><b>Error. La extensiónn no es correcta.<br/>
+            echo '<div><b>Error. La extensión no es correcta.<br/>
         - Se permiten archivos .gif, .jpg y .png. </b></div>';
         } else {
             //Si la imagen es correcta en tamaño y tipo
@@ -26,9 +21,8 @@ if (isset($_POST['aceptar'])) {
             }
         }
         if (move_uploaded_file($temp, $rutaDestino)) {
-            
 
-            $sql = "INSERT INTO noticia (titulo, descripcion, contenido, autor, foto) VALUES ('$titulo','$descripcion','$descripcion','$autor', '$rutaDestino')";
+            $sql = "UPDATE usuario SET nombre='$nombre', apellidos='$apellidos', foto='$rutaDestino' WHERE id='$id'";
             $resultado = mysqli_query($conexion, $sql);
 
             if ($resultado) {
@@ -43,4 +37,4 @@ if (isset($_POST['aceptar'])) {
             echo '<div><b>Ocurrió algún error al subir el fichero. No pudo guardarse.</b></div>';
         }
     }
-}
+?>
