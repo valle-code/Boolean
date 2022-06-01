@@ -274,8 +274,6 @@ input[type="password"] {
   border: none;
 }
 
-
-
 #buscar{
   width: 190px;
   background-color: white;
@@ -295,7 +293,9 @@ input[type="password"] {
     padding: 15px;
     box-sizing: border-box;
     margin: 10px 15px;
-   
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
     transition: 0.5s;
 }
 

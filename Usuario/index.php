@@ -60,7 +60,7 @@ $resultado = mysqli_query($conexion, $sql);
                         while ($fila = mysqli_fetch_array($resultado)) {
                 ?>
                     <a href = "https://youtu.be/2gOONm89Nnk?t=2405">
-                        <div class="wrapper" style="background-image: url('./Noticias/<?php echo($fila['foto'])?>')">
+                        <div class="wrapper" style="background-image: url('Resources/Noticias/<?php echo($fila['titulo'])?>/<?php echo($fila['foto'])?>')">
                         <h5><?php echo($fila['titulo']) ?></h5>
                         <p>
                             <?php echo($fila['descripcion']) ?>
@@ -71,22 +71,6 @@ $resultado = mysqli_query($conexion, $sql);
                         }
                     }
                     ?>
-                <!-- <a href = "https://youtu.be/2gOONm89Nnk?t=2405">
-                    <div class="wrapper" style="background-image: url('../')">
-                    <h5>Noticia 1</h5>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                        eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    </p>
-                    </div>
-                </a>
-
-                <div class="wrapper" >
-                    <h5>Noticia 2</h5>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                        eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    </p> -->
                 </div>
             </div>
         </main>
