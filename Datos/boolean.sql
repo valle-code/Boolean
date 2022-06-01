@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 01-06-2022 a las 17:17:51
+-- Tiempo de generación: 01-06-2022 a las 19:30:19
 -- Versión del servidor: 10.4.21-MariaDB
--- Versión de PHP: 8.0.10
+-- Versión de PHP: 8.0.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -82,11 +82,9 @@ CREATE TABLE `noticia` (
 --
 
 INSERT INTO `noticia` (`id`, `id_user`, `titulo`, `descripcion`, `contenido`, `autor`, `foto`) VALUES
-(1, 0, 'DFYUDASHUYCAUTFUJ', 'PLHGCFHJKOÑJCXGFHJKOKGCFGHJIOHGFGHIOPKHJ', 'PLHGCFHJKOÑJCXGFHJKOKGCFGHJIOHGFGHIOPKHJ', 'JIADCSGHJdklakl', 'tmp/805550_20211126170424_1.png'),
-(2, 0, 'jklashjkfadsa', 'lkjkhgvdjlkñjvgbjhklñ', 'lkjkhgvdjlkñjvgbjhklñ', 'kljbjkj', 'jklashjkfadsa/'),
-(3, 0, 'jhjgjkhg', 'jmhhgjhjkk', 'jmhhgjhjkk', 'bjkb', 'jhjgjkhg/'),
-(4, 0, 'kñjhcvhjkl', 'k´pojhgfyhjilkhg', 'k´pojhgfyhjilkhg', 'jkhgfxdghjf', '../Usuario/Resources/Noticias/kñjhcvhjkl/805550_20211126170424_1.png'),
-(5, 0, 'mñkouhgcxvgjklñ', '.´ñkjcvpopiuyfgiopjghfcghj', '.´ñkjcvpopiuyfgiopjghfcghj', 'ljhugfhjgbhj', '../Usuario/Resources/Noticias/mñkouhgcxvgjklñ/805550_20211126170424_1.png');
+(6, 0, 'Hola Mundo', 'Hola esta es la primera publicación en Boolean, espero que sea de vuestro agrado :) (1/06/2022)', 'Hola esta es la primera publicación en Boolean, espero que sea de vuestro agrado :) (1/06/2022)', 'Daniel', 'Captura de pantalla 2021-11-29 165409.jpg'),
+(7, 0, 'Telefono Falso', '999999999 Es un teléfono fraudulento que roba tu información del dispositivo móvil', '999999999 Es un teléfono fraudulento que roba tu información del dispositivo móvil', 'Daniel', 'smartphone-1957740_1920.jpg'),
+(8, 0, 'Victoria', 'El piloto Daniel Valle gana el el gran premio de Hungría', 'El piloto Daniel Valle gana el el gran premio de Hungría', 'Daniel', '2022-05-14_7.png');
 
 -- --------------------------------------------------------
 
@@ -109,9 +107,9 @@ CREATE TABLE `usuario` (
 --
 
 INSERT INTO `usuario` (`id`, `nombre`, `apellidos`, `email`, `contraseña`, `foto`, `estado`) VALUES
-(4, 'Daniel', 'Valle', 'tableclanvalle@gmail', 'asdf1234_', '../Usuario/Resources/Usuarios/Daniel/805550_20211126170424_1.png', 'admin'),
-(6, 'Daniel', 'Valle', 'danivalle.code@gmail', 'WSO_Dani03', '805550_20211126170424_1.png', ''),
-(7, 'María', 'Valle', 'edgarbrba@gmail.com', 'jhagdsghashjkd', 'imagenes/default.png', 'user');
+(4, 'Daniel', 'Valle', 'tableclanvalle@gmail', 'asdf1234_', '805550_20211126170424_1.png', 'admin'),
+(6, 'Daniel', 'Valle', 'danivalle.code@gmail', 'WSO_Dani03', '805550_20211126170424_1.png', 'user'),
+(7, 'María', 'Valle', 'edgarbrba@gmail.com', 'jhagdsghashjkd', 'default.png', 'user');
 
 --
 -- Disparadores `usuario`
@@ -125,7 +123,7 @@ DELIMITER ;
 DELIMITER $$
 CREATE TRIGGER `trigger_asignar_foto` BEFORE INSERT ON `usuario` FOR EACH ROW BEGIN
   DECLARE foto VARCHAR(100);
-  SET NEW.foto = 'imagenes/default.png';
+  SET NEW.foto = 'default.png';
 END
 $$
 DELIMITER ;
@@ -184,7 +182,7 @@ ALTER TABLE `mod_usuario`
 -- AUTO_INCREMENT de la tabla `noticia`
 --
 ALTER TABLE `noticia`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT de la tabla `usuario`
