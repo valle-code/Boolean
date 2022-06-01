@@ -28,7 +28,7 @@ if (isset($_POST['aceptar'])) {
         if (move_uploaded_file($temp, $rutaDestino)) {
             
 
-            $sql = "INSERT INTO noticia (titulo, descripcion, contenido, autor, foto) VALUES ('$titulo','$descripcion','$descripcion','$autor', '$rutaDestino')";
+            $sql = "INSERT INTO noticia (titulo, descripcion, contenido, autor, foto) VALUES ('$titulo','$descripcion','$descripcion','$autor', '$archivo_nombre')";
             $resultado = mysqli_query($conexion, $sql);
 
             if ($resultado) {

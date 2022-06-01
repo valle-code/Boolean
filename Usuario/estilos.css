@@ -295,9 +295,7 @@ input[type="password"] {
     padding: 15px;
     box-sizing: border-box;
     margin: 10px 15px;
-    background-image: url("./imagenes/istockphoto-462155265-612x612.jpg");
-    background-position: center;
-    background-size: cover;
+   
     transition: 0.5s;
 }
 

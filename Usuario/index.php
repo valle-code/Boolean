@@ -1,6 +1,6 @@
 <?php
 require("../Datos/conexion.php");
-$sql = "SELECT *  FROM noticia";
+$sql = "SELECT *  FROM noticia ORDER BY id DESC LIMIT 2";
 $resultado = mysqli_query($conexion, $sql);
 ?>
 <html>
@@ -55,8 +55,24 @@ $resultado = mysqli_query($conexion, $sql);
             </div>
             <!--Columna derecha-->
             <div class="columna" id = "noticias">
-                <a href = "https://youtu.be/2gOONm89Nnk?t=2405">
-                    <div class="wrapper" id="wrapper1">
+                <?php 
+                    if ($resultado) {
+                        while ($fila = mysqli_fetch_array($resultado)) {
+                ?>
+                    <a href = "https://youtu.be/2gOONm89Nnk?t=2405">
+                        <div class="wrapper" style="background-image: url('./Noticias/<?php echo($fila['foto'])?>')">
+                        <h5><?php echo($fila['titulo']) ?></h5>
+                        <p>
+                            <?php echo($fila['descripcion']) ?>
+                        </p>
+                        </div>
+                    </a>
+                    <?php
+                        }
+                    }
+                    ?>
+                <!-- <a href = "https://youtu.be/2gOONm89Nnk?t=2405">
+                    <div class="wrapper" style="background-image: url('../')">
                     <h5>Noticia 1</h5>
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -65,12 +81,12 @@ $resultado = mysqli_query($conexion, $sql);
                     </div>
                 </a>
 
-                <div class="wrapper" id="wrapper2">
+                <div class="wrapper" >
                     <h5>Noticia 2</h5>
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                         eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    </p>
+                    </p> -->
                 </div>
             </div>
         </main>

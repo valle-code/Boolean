@@ -13,8 +13,7 @@ require("../Datos/conexion.php");
             echo '<div><b>Error. La extensión no es correcta.<br/>
         - Se permiten archivos .gif, .jpg y .png. </b></div>';
         } else {
-            //Si la imagen es correcta en tamaño y tipo
-            //Se intenta subir al servidor
+            //Si la extensión de la imagen es correcta, se intenta subir al servidor
             $micarpeta = $ruta;
             if (!file_exists($micarpeta)) {
                 mkdir($micarpeta, 0777, true);
@@ -22,7 +21,7 @@ require("../Datos/conexion.php");
         }
         if (move_uploaded_file($temp, $rutaDestino)) {
 
-            $sql = "UPDATE usuario SET nombre='$nombre', apellidos='$apellidos', foto='$rutaDestino' WHERE id='$id'";
+            $sql = "UPDATE usuario SET nombre='$nombre', apellidos='$apellidos', foto='$archivo_nombre' WHERE id='$id'";
             $resultado = mysqli_query($conexion, $sql);
 
             if ($resultado) {
