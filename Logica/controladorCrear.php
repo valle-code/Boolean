@@ -4,8 +4,8 @@ require("../Datos/conexion.php");
 //Si se quiere subir una imagen
 if (isset($_POST['aceptar'])) {
     $titulo = $_POST['nombre'];
+    $contenido = $_POST['contenido'];
     $descripcion = $_POST['descripcion'];
-    $autor = $_POST['autor'];
     $archivo_nombre = $_FILES['archivo']['name'];
 
     if (isset($archivo_nombre) && $archivo_nombre != "") {
@@ -28,7 +28,7 @@ if (isset($_POST['aceptar'])) {
         if (move_uploaded_file($temp, $rutaDestino)) {
             
 
-            $sql = "INSERT INTO noticia (titulo, descripcion, contenido, autor, foto) VALUES ('$titulo','$descripcion','$descripcion','$autor', '$archivo_nombre')";
+            $sql = "INSERT INTO noticia (titulo, descripcion, contenido, foto) VALUES ('$titulo','$descripcion','$contenido', '$archivo_nombre')";
             $resultado = mysqli_query($conexion, $sql);
 
             if ($resultado) {

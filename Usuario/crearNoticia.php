@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="estilos.css" title="style" />
+    <link rel="stylesheet" href="normalize.css">
     <script src="../Logica/script/validacionCrear.js"></script>
     <title>Crea tu foro</title>
   </head>
@@ -25,7 +26,7 @@
               </div><br>
               <h2>Contenido</h2>
               <br>
-              <textarea id="descripcion" name ="descripcion" name = "descripcion" rows="4" cols="50" placeholder="Contenido" maxlength="3000"></textarea><br><br><br>
+              <textarea id="contenido" name ="contenido" rows="20" cols="100" placeholder="Contenido" maxlength="4000"></textarea><br><br><br>
               <div class="aviso">
                 <p class = "warning" id = "warning1"></p>
               </div>
@@ -44,9 +45,9 @@
               </div><br>
             </div>
             <div class="caja" id="caja4">
-              <h2>Autor</h2>
+              <h2>Descripcion</h2>
               <br>
-              <input type="text" name="autor" id = "autor" placeholder="Tu nombre" required maxlength="20"/><br><br>
+              <textarea id="descripcion" name ="descripcion" rows="4" cols="100" placeholder="Breve descripcion.... " maxlength="300"></textarea><br><br>
               <div class="aviso">
                 <p class = "warning" id = "warning1"></p>
             </div><br>

@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel = "stylesheet" href = "./estilos.css" type = "text/css">
+    
     <script src="../Logica/script/validacionLogin.js"></script>
     <title>Login</title>
 </head>
@@ -12,10 +13,10 @@
     <div id = "container">
         <div class = "padre">  
           <div id = "logcaja">
-            <form action="#" method="post" id = "loginForm">
+            <form action="../Logica/controladorLogin.php" method="post" id = "loginForm">
             <div id = "campos">
                 <label for>Email:</label>
-                <input type="text" name="email" id="email" class = "loginputs" required onkeyup="validarEmail()"/><br><br>
+                <input type="text" name="email" id="email" class = "loginputs" required/><br><br>
                 <div class="aviso">
                     <p class = "warning" id = "warning6"></p>
                 </div><br>

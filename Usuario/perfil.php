@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./estilos.css" type="text/css" />
+    
     <script src="../Logica/script/validacionPerfil.js"></script>
     <title>Perfil</title>
   </head>
@@ -14,7 +15,7 @@
       <a title="atras" href="./index.php"><img src="./imagenes/icons8-atrás-100.png" alt="atrás"/></a>
       <div class="perfil">   
             <div class="perfil-img">
-              <img class = imgPerfil src="./imagenes/descarga.jpg" alt="Cambia tu imagen de perfil" />
+              <img class = imgPerfil src="./imagenes/default.png" heigth = "200px" width = "200px" alt="Cambia tu imagen de perfil" />
             </div>
           <form action = "../Logica/controladorPerfil.php" method="POST" enctype="multipart/form-data">
             <div class="perfil-info">

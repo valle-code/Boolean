@@ -1,15 +1,8 @@
 <?php
 require("../Datos/conexion.php");
-$sql = "SELECT *  FROM noticia";
+$buscar = $_POST['buscar'];
+$sql = "SELECT * FROM noticia WHERE titulo LIKE '%$buscar%'";
 $resultado = mysqli_query($conexion, $sql);
-if (isset($_POST['buscar'])) {
-    $titulo = $_POST['busqueda'];
-    $sql = "SELECT * FROM noticia WHERE titulo LIKE '%$titulo%'";
-    $resultado = mysqli_query($conexion, $sql);
-} else {
-    $sql = "SELECT * FROM noticia";
-    $resultado = mysqli_query($conexion, $sql);
-}
 ?>
 <html>
 <head>
@@ -50,18 +43,18 @@ if (isset($_POST['buscar'])) {
         <div class="algo">
             <div class="tarjeta">
                 <div class="texto">
-                <form action = "./noticias.php" method="POST" enctype="multipart/form-data">
+                <form action = "../Logica/controladorBuscar.php" method="POST" enctype="multipart/form-data">
                     <div class="flex-row">
-                        <input type="text" name="busqueda" id ="busqueda" placeholder="Buscar...">
+                        <input type="text" name="buscar" placeholder="Buscar...">
                         <input type="submit" name="buscar" id="buscar" value="Buscar">
                     </div>
-                </form><br><br>
+                </form>
                     <div id="arreglo3">
                         <?php 
                             if ($resultado) {
                                 while ($fila = mysqli_fetch_array($resultado)) {
                         ?>
-                            <a href = "./articulo.php?id=<?php echo $fila['id'] ?>">
+                            <a href = "https://youtu.be/2gOONm89Nnk?t=2405">
                                 <div class="wrapper" style="background-image: url('Resources/Noticias/<?php echo($fila['titulo'])?>/<?php echo($fila['foto'])?>')">
                                 <h5><?php echo($fila['titulo']) ?></h5>
                                 <p>

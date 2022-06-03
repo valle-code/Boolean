@@ -1,5 +1,22 @@
 <?php
 require("../Datos/conexion.php");
+// session_start
+if (isset($_POST['login']) or isset($_POST['enviar'])) {
+    $email = $_POST['email'];
+    $psw = $_POST['psw'];
+    $hash = hash('ripemd160', $psw);
+    $sql = "SELECT * FROM usuario WHERE email = '$email' AND contraseña = '$hash'";
+    $resultado = mysqli_query($conexion, $sql);
+    $filas = mysqli_num_rows($resultado);
+    if ($filas > 0) {
+        session_start();
+        $_SESSION['email'] = $email;
+        $_SESSION['psw'] = $psw;
+        Header("Location: ../Usuario/index.php");
+    } else {
+        echo "error en la contraseña";
+    }
+}
 $sql = "SELECT *  FROM noticia ORDER BY id DESC LIMIT 2";
 $resultado = mysqli_query($conexion, $sql);
 ?>
@@ -9,6 +26,7 @@ $resultado = mysqli_query($conexion, $sql);
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
     <link rel="stylesheet" type="text/css" href="estilos.css" title="style" />
+    <!-- normalize css -->
     
     <!--favicon-->
     <link rel="shortcut icon" href="./imagenes/favicon.png" type="image/x-icon">
@@ -55,22 +73,24 @@ $resultado = mysqli_query($conexion, $sql);
             </div>
             <!--Columna derecha-->
             <div class="columna" id = "noticias">
-                <?php 
-                    if ($resultado) {
-                        while ($fila = mysqli_fetch_array($resultado)) {
-                ?>
-                    <a href = "https://youtu.be/2gOONm89Nnk?t=2405">
-                        <div class="wrapper" style="background-image: url('Resources/Noticias/<?php echo($fila['titulo'])?>/<?php echo($fila['foto'])?>')">
-                        <h5><?php echo($fila['titulo']) ?></h5>
-                        <p>
-                            <?php echo($fila['descripcion']) ?>
-                        </p>
-                        </div>
-                    </a>
-                    <?php
-                        }
-                    }
+                    <div class="arreglo">
+                    <?php 
+                        if ($resultado) {
+                            while ($fila = mysqli_fetch_array($resultado)) {
                     ?>
+                        <a href = "./articulo.php?id=<?php echo $fila['id'] ?>"">
+                            <div class="wrapper" style="background-image: url('Resources/Noticias/<?php echo($fila['titulo'])?>/<?php echo($fila['foto'])?>')">
+                            <h5><?php echo($fila['titulo']) ?></h5>
+                            <p>
+                                <?php echo($fila['descripcion']) ?>
+                            </p>
+                            </div>
+                        </a>
+                        <?php
+                            }
+                        }
+                        ?>
+                    </div>
                 </div>
             </div>
         </main>
