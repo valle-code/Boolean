@@ -1,23 +1,18 @@
 <?php
 require("../Datos/conexion.php");
-// session_start
-if (isset($_POST['login']) or isset($_POST['enviar'])) {
-    $email = $_POST['email'];
-    $psw = $_POST['psw'];
-    $hash = hash('ripemd160', $psw);
-    $sql = "SELECT * FROM usuario WHERE email = '$email' AND contraseña = '$hash'";
-    $resultado = mysqli_query($conexion, $sql);
-    $filas = mysqli_num_rows($resultado);
-    if ($filas > 0) {
-        session_start();
-        $_SESSION['email'] = $email;
-        $_SESSION['psw'] = $psw;
-        Header("Location: ../Usuario/index.php");
-    } else {
-        echo "error en la contraseña";
-    }
+// inicia la sesion con email 
+session_start();
+if (isset($_SESSION['email'])) {
+    $email = $_SESSION['email'];
+    $sql_user = "SELECT * FROM usuario WHERE email = '$email'";
+    $resultado_user = mysqli_query($conexion, $sql_user) or die(mysqli_error($conexion));
+    $row_user = mysqli_fetch_array($resultado_user);
+} else {
+   $email = '';
+   $psw = '';
 }
-$sql = "SELECT *  FROM noticia ORDER BY id DESC LIMIT 2";
+
+$sql = "SELECT * FROM noticia ORDER BY id DESC LIMIT 2";
 $resultado = mysqli_query($conexion, $sql);
 ?>
 <html>
@@ -43,15 +38,27 @@ $resultado = mysqli_query($conexion, $sql);
                     <li class="barra">
                         <a href="./noticias.php" class="decBarra">Noticias</a>
                     </li>
+                  
                     <li class="barra">
                         <a href="./crearNoticia.php" class="decBarra">Crear</a>
                     </li>
                     <li class="barra">
-                        <a href="./perfil.php" class="decBarra">Perfil</a>
+                        <a href="./perfil.php "class="decBarra">Perfil</a>
                     </li>
+                    
                     <li class="barra">
                         <a href="./contacto.php" class="decBarra">Contacto</a>
                     </li>
+
+                    <?php
+                    if ($email != '') {
+                        if ($row_user['estado'] == 'admin') { 
+                    ?>
+                        <li class="barra">
+                            <a href="./usuarios.php" class="decBarra">Usuarios</a>
+                        </li>
+                    <?php } 
+                    }?>
                 </ul>
             </nav>
         </div>
@@ -60,10 +67,10 @@ $resultado = mysqli_query($conexion, $sql);
             <div class="columna">
                 <h1 id="boolean">Boolean</h1>
                 <p id="parrafo1">
-                    Boolean es un sitio web en el que tratar sobre temas candentes en nuestra sociedad
-                    como pueden ser las estafas de diversos tipos. Desde el punto de vista de la
+                    Boolean es un sitio web en el que tratar sobre temas candentes en nuestra sociedad,
+                    como pueden ser las estafas de diversos tipos, noticias más recientes o eventos deportivos. Desde el punto de vista de la
                     información, se trata de un sitio web que se dedica a la divulgación de información
-                    sobre temas que sean de interés general.
+                    sobre temas que sean de interés general, desde una perspectiva neutral y objetiva.
                 </p>
                 <br><br>
                 <div id="botones">
@@ -78,7 +85,7 @@ $resultado = mysqli_query($conexion, $sql);
                         if ($resultado) {
                             while ($fila = mysqli_fetch_array($resultado)) {
                     ?>
-                        <a href = "./articulo.php?id=<?php echo $fila['id'] ?>"">
+                        <a href = "./articulo.php?id=<?php echo $fila['id'] ?>">
                             <div class="wrapper" style="background-image: url('Resources/Noticias/<?php echo($fila['titulo'])?>/<?php echo($fila['foto'])?>')">
                             <h5><?php echo($fila['titulo']) ?></h5>
                             <p>

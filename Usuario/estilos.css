@@ -129,7 +129,6 @@ li:hover {
 
 #contenedor{
   width: 100%;
-  height: 100%;
   background-image: url(./imagenes/website-background-image-size-psd-vector-photo_waifu2x_art_noise3_scale_tta_1.png);
   background-position: center;
   background-size: cover;
@@ -150,7 +149,6 @@ li:hover {
 
 .contenedor {
   width: 100%;
-  height: 100%;
   background-image: url(./imagenes/website-background-image-size-psd-vector-photo_waifu2x_art_noise3_scale_tta_1.png);
   display: flex;
   flex-direction: row;
@@ -447,11 +445,12 @@ body {
   color:rgb(255, 255, 255);
   width: 25%;
   height: 75%;
-  border: 5px solid white;
-  border-radius: 20px;
   background-position: center;
   background-size: cover;
   box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .imgPerfil{
@@ -469,6 +468,16 @@ body {
   position: relative;
 }
 
+.perfil-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
 .input {
   width: 88%;
 }
@@ -480,12 +489,12 @@ body {
 
 .fondo{
   background-image: url(./imagenes/website-background-image-size-psd-vector-photo_waifu2x_art_noise3_scale_tta_1.png);
-  background-position: center;
-  background-size: cover;
+  background-repeat: repeat;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100vw;
+  height: 100vh;
 }
 
 .foro {
@@ -550,10 +559,10 @@ textarea {
   align-items: center;
 }
 
-body {
+/* body {
   background-image: url(./imagenes/website-background-image-size-psd-vector-photo_waifu2x_art_noise3_scale_tta_1.png);
 
-}
+} */
 
 #background-wrapper{
   background-image: url(./imagenes/website-background-image-size-psd-vector-photo_waifu2x_art_noise3_scale_tta_1.png);
@@ -601,4 +610,71 @@ section {
   margin-left: 200px;
   margin-right: 200px;
 }
+
+#user-bck {
+  background-image: url(./imagenes/website-background-image-size-psd-vector-photo_waifu2x_art_noise3_scale_tta_1.png);
+  background-position: center;
+  background-size:cover;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-repeat: repeat;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+thead tr th{
+  color: rgb(255, 255, 255);
+  background-color: rgba(255, 255, 255, 0);
+}
+
+th{
+  padding: 15px;
+  background-color: white;
+}
+
+.tabla {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 2%;
+  padding-left: 5%;
+  padding-right: 5%;
+  width: 100%;
+}
+
+#ban-bck {
+  background-image: url(./imagenes/website-background-image-size-psd-vector-photo_waifu2x_art_noise3_scale_tta_1.png);
+  background-position: center;
+  background-size:cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-repeat: repeat;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+
+#baneado {
+  font-size: 70px;
+}
+
+#ban-p {
+  font-size: 30px;
+}
+
+
+
 

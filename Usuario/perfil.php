@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./estilos.css" type="text/css" />
-    
     <script src="../Logica/script/validacionPerfil.js"></script>
     <title>Perfil</title>
   </head>

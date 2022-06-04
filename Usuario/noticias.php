@@ -18,7 +18,6 @@ if (isset($_POST['buscar'])) {
     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
     <link rel="stylesheet" type="text/css" href="estilos.css" title="style" />
     <link href=" https://fonts.google.com/css?family=Kanit" rel = "stylesheet">
-    
     <!--favicon-->
     <link rel="shortcut icon" href="" type="image/x-icon">
     <title>Noticias</title>

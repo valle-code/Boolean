@@ -1,5 +1,6 @@
 <?php
 require("../Datos/conexion.php");
+
     $id = 6;
     $nombre = $_POST['nombre'];
     $apellidos = $_POST['apellido'];
@@ -13,7 +14,7 @@ require("../Datos/conexion.php");
             echo '<div><b>Error. La extensión no es correcta.<br/>
         - Se permiten archivos .gif, .jpg y .png. </b></div>';
         } else {
-            //Si la extensión de la imagen es correcta, se intenta subir al servidor
+            //Si la extensión de la imagen es correcta, se intenta subir al servidor y crear uan carpeta con el nombre del usuario
             $micarpeta = $ruta;
             if (!file_exists($micarpeta)) {
                 mkdir($micarpeta, 0777, true);
@@ -34,6 +35,7 @@ require("../Datos/conexion.php");
         } else {
             //Si no se ha podido subir la imagen, mostramos un mensaje de error
             echo '<div><b>Ocurrió algún error al subir el fichero. No pudo guardarse.</b></div>';
+            mysqli_close($conexion);
         }
     }
 ?>

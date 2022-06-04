@@ -1,3 +1,16 @@
+<?php 
+// requiere inicio de sesion
+require("../Datos/conexion.php");
+session_start();
+if (isset($_SESSION['email'])) {
+    $email = $_SESSION['email'];
+    $sql_user = "SELECT * FROM usuario WHERE email = '$email'";
+    $resultado_user = mysqli_query($conexion, $sql_user) or die(mysqli_error($conexion));
+    $row_user = mysqli_fetch_array($resultado_user);
+} else {
+  Header("Location: ../Usuario/login.php");
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -5,7 +18,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="estilos.css" title="style" />
-    <link rel="stylesheet" href="normalize.css">
     <script src="../Logica/script/validacionCrear.js"></script>
     <title>Crea tu foro</title>
   </head>
@@ -13,7 +25,7 @@
     <div class="fondo">
       <div class="foro">
         <a title="atras" href="./index.php"><img src="./imagenes/icons8-atrás-100.png" alt="atrás" /></a>
-        <form action="../Logica/controladorCrear.php" method="POST" enctype="multipart/form-data">
+        <form action="../Logica/controladorCrear.php?id=<?php echo $row_user['id'] ?>" method="POST" enctype="multipart/form-data">
           <div class="grupo" id="grupo1">
             <h1>Información del foro</h1>
             <br>

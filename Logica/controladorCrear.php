@@ -3,6 +3,7 @@ require("../Datos/conexion.php");
 
 //Si se quiere subir una imagen
 if (isset($_POST['aceptar'])) {
+    $id = $_GET['id'];
     $titulo = $_POST['nombre'];
     $contenido = $_POST['contenido'];
     $descripcion = $_POST['descripcion'];
@@ -18,17 +19,17 @@ if (isset($_POST['aceptar'])) {
             echo '<div><b>Error. La extensiónn no es correcta.<br/>
         - Se permiten archivos .gif, .jpg y .png. </b></div>';
         } else {
-            //Si la imagen es correcta en tamaño y tipo
-            //Se intenta subir al servidor
-            $micarpeta = $ruta;
-            if (!file_exists($micarpeta)) {
-                mkdir($micarpeta, 0777, true);
+            //Si la imagen es correcta en tamaño y tipo, se sube al servidor y se crea una nueva carpeta
+            $carpeta = $ruta;
+            // Si la carpeta no existe, se crea
+            if (!file_exists($carpeta)) {
+                mkdir($carpeta, 0777, true);
+            } else {
+                echo '<div><b>Error. La carpeta ya existe.</b></div>';
             }
         }
         if (move_uploaded_file($temp, $rutaDestino)) {
-            
-
-            $sql = "INSERT INTO noticia (titulo, descripcion, contenido, foto) VALUES ('$titulo','$descripcion','$contenido', '$archivo_nombre')";
+            $sql = "INSERT INTO noticia (id_user, titulo, descripcion, contenido, foto) VALUES ('$id','$titulo','$descripcion','$contenido', '$archivo_nombre')";
             $resultado = mysqli_query($conexion, $sql);
 
             if ($resultado) {

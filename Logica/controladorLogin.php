@@ -1,4 +1,4 @@
-<?php 
+<?php
 require("../Datos/conexion.php");
 
 // sistema de login
@@ -9,14 +9,17 @@ if (isset($_POST['login'])) {
     $sql = "SELECT * FROM usuario WHERE email = '$email' AND contraseña = '$hash'";
     $resultado = mysqli_query($conexion, $sql);
     $filas = mysqli_num_rows($resultado);
-    echo("hola");
     if ($filas > 0) {
-        session_start();
-        $_SESSION['email'] = $email;
-        $_SESSION['psw'] = $psw;
-        Header("Location: ../Usuario/index.php");
+        $fila = mysqli_fetch_assoc($resultado);
+        if ($fila['ban'] == 'No') {
+            session_start();
+            $_SESSION['email'] = $email;
+            $_SESSION['psw'] = $psw;
+            Header("Location: ../Usuario/index.php");
+        } else {
+            Header("Location: ../Usuario/baneado.html");
+        }
     } else {
-        echo "error en la contraseña";
+        echo "error en el usuario y su contraseña";
     }
 }
-?>
