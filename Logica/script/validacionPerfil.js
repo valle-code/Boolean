@@ -42,7 +42,7 @@ function checkTexto(texto) {
     var nombre = document.getElementById("nombre");
     var apellidos = document.getElementById("apellido");
   
-    if (nombre.value == "" &&
+    if (nombre.value == "" ||
       apellidos.value == ""
     ) {
       document.getElementById("warning6").innerHTML =

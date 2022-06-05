@@ -16,7 +16,7 @@
       <div id="caja">
         <form action="../Logica/controladorRegistro.php" method="post" id = "registro">
           <label for>Email:</label>
-          <input type="text" name="email" id="email" class="inputTexto" required onkeydown="validarEmail()"/><br><br>
+          <input type="text" name="email" id="email" class="inputTexto" required onkeyup="validarEmail()"/><br><br>
           <div class="aviso">
             <p class = "warning" id = "warning1"></p>
           </div><br>     
@@ -36,7 +36,7 @@
             <p class = "warning" id = "warning4"></p>
           </div><br>     
           <label for>Confirmar contraseña:</label>
-          <input type="password" name="psw2" id="psw2" placeholder="Escriba de nuevo su contraseña" minlength = "8" maxlength = "16" required onkeyup="validarEmail()"/><br><br>
+          <input type="password" name="psw2" id="psw2" placeholder="Escriba de nuevo su contraseña" minlength = "8" maxlength = "16" required/><br><br>
           <div class="aviso">
             <p class = "warning" id = "warning5"></p>
           </div><br>     

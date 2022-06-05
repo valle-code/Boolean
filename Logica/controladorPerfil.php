@@ -17,7 +17,7 @@ if (isset($archivo_nombre) && $archivo_nombre != "") {
         if (move_uploaded_file($temp, $rutaDestino)) {
 
             $sql = "UPDATE usuario SET nombre='$nombre', apellidos='$apellidos', foto='$archivo_nombre' WHERE id='$id'";
-            $resultado = mysqli_query($conexion, $sql);
+            $resultado = mysqli_query($conexion, $sql) or die(mysqli_error($conexion));
 
             if ($resultado) {
                 Header("Location: ../Usuario/perfil.php");
@@ -34,7 +34,7 @@ if (isset($archivo_nombre) && $archivo_nombre != "") {
     }
 } else {
     $sql = "UPDATE usuario SET nombre='$nombre', apellidos='$apellidos' WHERE id='$id'";
-    $resultado = mysqli_query($conexion, $sql);
+    $resultado = mysqli_query($conexion, $sql) or die(mysqli_error($conexion));
 
     if ($resultado) {
         Header("Location: ../Usuario/perfil.php");

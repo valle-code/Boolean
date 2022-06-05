@@ -8,24 +8,29 @@ $hash = hash('ripemd160', $psw);
 $psw2 = $_POST['psw2'];
 
 if (isset($_POST['enviar'])) {
-    $sql = "SELECT * FROM usuario WHERE email = '$email'";
-    $resultado = mysqli_query($conexion, $sql);
-    $filas = mysqli_num_rows($resultado);
-    if ($filas > 0) {
-        header("Location: ../Usuario/emailEqual.html");
+    // comprobar que no hay nulos
+    if (empty($_POST['nombre']) || empty($_POST['apellidos']) || empty($_POST['email']) || empty($_POST['psw']) || empty($_POST['psw2'])) {
+        header("Location: ../Usuario/error404.html");
     } else {
-        if ($psw == $psw2) {
-            $sql = "INSERT INTO usuario (nombre, apellidos, email, contraseña) VALUES ('$nombre','$apellidos','$email','$hash')";
-            $resultado = mysqli_query($conexion, $sql);
-            if ($resultado) {
-               header("Location: ../Usuario/index.php");
-            } else {
-               header("Location: ../Usuario/error404.html");
-            }
+        $sql = "SELECT * FROM usuario WHERE email = '$email'";
+        $resultado = mysqli_query($conexion, $sql) or die(mysqli_error($conexion));
+        $filas = mysqli_num_rows($resultado);
+        if ($filas > 0) {
+            header("Location: ../Usuario/emailEqual.html");
         } else {
-            header("Location: ../Usuario/pswEqual.html");
+            if ($psw == $psw2) {
+                $sql = "INSERT INTO usuario (nombre, apellidos, email, contraseña) VALUES ('$nombre','$apellidos','$email','$hash')";
+                $resultado = mysqli_query($conexion, $sql) or die(mysqli_error($conexion));
+                if ($resultado) {
+                   header("Location: ../Usuario/index.php");
+                } else {
+                   header("Location: ../Usuario/error404.html");
+                }
+            } else {
+                header("Location: ../Usuario/pswEqual.html");
+            }
         }
+        mysqli_close($conexion);
     }
-    mysqli_close($conexion);
 }
 ?>

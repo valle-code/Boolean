@@ -17,11 +17,11 @@ function validarPsw() {
   }
 
   function checkInputs() {
-    var email = document.getElementById("email");
     var psw = document.getElementById("psw");
+    var email = document.getElementById("email");
     if (
-      psw.value == "" &&
-      email.value == ""
+      psw.value === "" ||
+      email.value === ""
     ) {
       document.getElementById("warning2").innerHTML =
         "Todos los campos son obligatorios";
@@ -56,34 +56,11 @@ function validarPsw() {
   }
 
   function checkEmail(email) {
-    var parte1;
-    var parte2;
-    var parte3;
-    var primerChar;
-    var caracteresRaros = ["!", "#", "$", "%", "&", "/", "^", "+", "*", "_"];
-    var i = 0;
-    var condicion = false;
     var aviso = document.getElementById("warning6");
 
-    if (email.length > 0 && email.includes("@") && email.includes(".")) {
-      parte1 = email.split("@")[0];
-      parte2 = email.split("@")[1];
-      parte3 = parte2.split(".")[0];
-      primerChar = parte1.charAt(0);
-      
-      if (parte1.length > 0 && parte2.length > 0 && parte3.length > 0 && parte3 == 'com' || 'es') {
-        while ( i < caracteresRaros.length && !parte1.includes(caracteresRaros[i]) && !parte2.includes(caracteresRaros[i]) && !primerChar.includes(caracteresRaros[i])) {
-          if (parte1.includes(caracteresRaros[i]) || parte2.includes(caracteresRaros[i]) || primerChar.includes(caracteresRaros[i])) {
-            condicion = true;
-          }
-          i++;
-        }
-
-        }
-    }
-    if (!condicion) {
-      aviso.innerHTML = "El email no es valido";
-    } else {
+    if (email.length > 0 && email.includes("@")) {
       aviso.innerHTML = "";
+    } else {
+      aviso.innerHTML = "El email no es valido";
     }
   }

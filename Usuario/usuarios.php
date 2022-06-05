@@ -10,7 +10,7 @@ if (isset($_SESSION['email'])) {
     $resultado = mysqli_query($conexion, $sql);
     if (isset($_POST['buscar'])) {
         $nombre = $_POST['busqueda'];
-        $sql = "SELECT * FROM usuario WHERE nombre LIKE '%$nombre%'";
+        $sql = "SELECT * FROM usuario WHERE nombre LIKE '%$nombre%' ORDER BY id DESC";
         $resultado = mysqli_query($conexion, $sql);
     } else {
         $sql = "SELECT * FROM usuario ORDER BY id DESC";

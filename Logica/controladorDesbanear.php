@@ -2,7 +2,7 @@
 require("../Datos/conexion.php");
 $id=$_GET['id'];
 $sql="UPDATE usuario SET ban = 'No' WHERE id='$id'";
-$resultado=mysqli_query($conexion,$sql);
+$resultado=mysqli_query($conexion,$sql) or die(mysqli_error($conexion));
 if ($resultado) {
     Header("Location: ../Usuario/usuarios.php");
 } else {

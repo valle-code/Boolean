@@ -50,7 +50,7 @@ function checkTexto(texto) {
     var email = document.getElementById("email");
     var mensaje = document.getElementById("mensaje");
   
-    if (email.value == "" &&
+    if (email.value == "" ||
       mensaje.value == ""
     ) {
       document.getElementById("warning6").innerHTML =
