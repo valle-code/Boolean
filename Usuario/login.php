@@ -16,7 +16,7 @@
             <form action="../Logica/controladorLogin.php" method="post" id = "loginForm">
             <div id = "campos">
                 <label for>Email:</label>
-                <input type="text" name="email" id="email" class = "loginputs" required/><br><br>
+                <input type="text" name="email" id="email" class = "loginputs" required onkeyup="validarEmail()"/><br><br>
                 <div class="aviso">
                     <p class = "warning" id = "warning6"></p>
                 </div><br>
