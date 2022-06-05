@@ -2,6 +2,7 @@
 require("../Datos/conexion.php");
 // inicia la sesion con email 
 session_start();
+$email = '';
 if (isset($_SESSION['email'])) {
     $email = $_SESSION['email'];
     $sql_user = "SELECT * FROM usuario WHERE email = '$email'";
@@ -10,6 +11,7 @@ if (isset($_SESSION['email'])) {
 } else {
    $email = '';
    $psw = '';
+   $row_user['estado'] = '';
 }
 
 $sql = "SELECT * FROM noticia ORDER BY id DESC LIMIT 2";
@@ -52,7 +54,7 @@ $resultado = mysqli_query($conexion, $sql);
 
                     <?php
                     if ($email != '') {
-                        if ($row_user['estado'] == 'admin') { 
+                        if ($row_user['estado'] == 'admin' ) { 
                     ?>
                         <li class="barra">
                             <a href="./usuarios.php" class="decBarra">Usuarios</a>
