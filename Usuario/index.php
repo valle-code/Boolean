@@ -86,7 +86,7 @@ $resultado = mysqli_query($conexion, $sql);
                             while ($fila = mysqli_fetch_array($resultado)) {
                     ?>
                         <a href = "./articulo.php?id=<?php echo $fila['id'] ?>">
-                            <div class="wrapper" style="background-image: url('Resources/Noticias/<?php echo($fila['titulo'])?>/<?php echo($fila['foto'])?>')">
+                            <div class="wrapper" style="background-image: url('Resources/Noticias/<?php echo($fila['titulo'])?>/<?php echo($fila['imagen'])?>')">
                             <h5><?php echo($fila['titulo']) ?></h5>
                             <p>
                                 <?php echo($fila['descripcion']) ?>

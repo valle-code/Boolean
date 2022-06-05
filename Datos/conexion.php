@@ -6,7 +6,7 @@
     $conexion=mysqli_connect($host,$user,$pasw);
 
     if(mysqli_connect_errno()){
-        echo "Error al conectar con la base de datos";
+        header("Location: ../Usuario/error404.html");
         exit();
     }
     mysqli_select_db($conexion,$bd) or die ("No se encuentra la base de datos");

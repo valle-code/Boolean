@@ -1,3 +1,15 @@
+<?php 
+require("../Datos/conexion.php");
+session_start();
+if (isset($_SESSION['email'])) {
+  $email = $_SESSION['email'];
+  $sql_user = "SELECT * FROM usuario WHERE email = '$email'";
+  $resultado_user = mysqli_query($conexion, $sql_user) or die(mysqli_error($conexion));
+  $row_user = mysqli_fetch_array($resultado_user);
+} else {
+  Header("Location: ../Usuario/login.php");
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -9,28 +21,46 @@
     <title>Perfil</title>
   </head>
   <body>
-
-    <div class="responsive">
-      <a title="atras" href="./index.php"><img src="./imagenes/icons8-atrás-100.png" alt="atrás"/></a>
+  <div class="responsive">
+        <div class="navegacion">
+          <a href = "./index.php"><img src="./imagenes/LogoDani-02.png" class="logo"/></a>
+            <nav>
+                <ul>
+                    <li class="barra">
+                        <a href="./noticias.php" class="decBarra">Noticias</a>
+                    </li>
+                    <li class="barra">
+                        <a href="./crearNoticia.php" class="decBarra">Crear</a>
+                    </li>
+                    <li class="barra">
+                        <a href="./perfil.php" class="decBarra">Perfil</a>
+                    </li>
+                    <li class="barra">
+                        <a href="./contacto.php" class="decBarra">Contacto</a>
+                    </li>
+                </ul>
+            </nav>
+        </div><br><br>
+      <div class="perfil-img">
+          <img class = imgPerfil src="./imagenes/<?php echo($row_user['foto'])?>" heigth = "200px" width = "200px" alt="Cambia tu imagen de perfil" />
+      </div>
+      <div class="arregloPerfil">
       <div class="perfil">   
-            <div class="perfil-img">
-              <img class = imgPerfil src="./imagenes/default.png" heigth = "200px" width = "200px" alt="Cambia tu imagen de perfil" />
-            </div>
-          <form action = "../Logica/controladorPerfil.php" method="POST" enctype="multipart/form-data">
+          <form action = "../Logica/controladorPerfil.php?id=<?php echo $row_user['id']?>" method="POST" enctype="multipart/form-data">
             <div class="perfil-info">
               <label for>Nombre</label>
-              <input type="text" name="nombre" id="nombre" class = "input" placeholder="Nombre" required onkeyup = "validarTexto()"/><br><br>
+              <input type="text" name="nombre" id="nombre" class = "input" placeholder="Nombre" value = "<?php echo $row_user['nombre']?>" required onkeyup = "validarTexto()"/><br><br>
               <div class="aviso">
                 <p class = "warning" id = "warning2"></p>
               </div><br>
-              <label for>Apellido</label>
-              <input type="text" name="apellido" id="apellido" class = "input" placeholder="Apellido" required onkeyup = "validarTexto()"/><br><br>
+              <label for>Apellidos</label>
+              <input type="text" name="apellido" id="apellido" class = "input" placeholder="Apellido" value = "<?php echo $row_user['apellidos']?>" required onkeyup = "validarTexto()"/><br><br>
               <div class="aviso">
                 <p class = "warning" id = "warning3"></p>
               </div><br>
               <label for>Foto</label>
               <div class="lol">
-                <input type="file" name="foto" id="foto" class = "input"/>
+                <input type="file" name="foto" id="foto" value = "<?php echo $row_user['foto']?>" class = "input"/>
               </div><br><br>
               <input type="submit" value="Guardar" id = "guardar" name = "guardar" onclick = "checkInputs()"/><br><br>
               <div class="aviso">
@@ -38,7 +68,8 @@
               </div><br>
             </div>
           </form>
-        </div>
+      </div>
+      </div>
       </div>
     </div>
   </body>

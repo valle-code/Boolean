@@ -20,6 +20,6 @@ if (isset($_POST['login'])) {
             Header("Location: ../Usuario/baneado.html");
         }
     } else {
-        echo "error en el usuario y su contraseña";
+        Header("Location: ../Usuario/usuarioExiste.html");
     }
 }

@@ -21,7 +21,7 @@
             <p class = "warning" id = "warning1"></p>
           </div><br>     
           <label for>Nombre:</label>
-          <input type="text" name="nombre" id="nombre" class="inputTexto" required onkeyup="validarTexto()"/><br><br>
+          <input type="text" name="nombre" id="nombre" class="inputTexto" required/><br><br>
           <div class="aviso">
             <p class = "warning" id = "warning2"></p>
           </div><br>     

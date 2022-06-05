@@ -16,8 +16,7 @@ if (isset($_POST['aceptar'])) {
         $rutaDestino = $ruta . $archivo_nombre;
 
         if (!((strpos($tipo, "gif") || strpos($tipo, "jpeg") || strpos($tipo, "jpg") || strpos($tipo, "png")))) {
-            echo '<div><b>Error. La extensiónn no es correcta.<br/>
-        - Se permiten archivos .gif, .jpg y .png. </b></div>';
+            header("Location: ../Usuario/error404.html");
         } else {
             //Si la imagen es correcta en tamaño y tipo, se sube al servidor y se crea una nueva carpeta
             $carpeta = $ruta;
@@ -25,23 +24,23 @@ if (isset($_POST['aceptar'])) {
             if (!file_exists($carpeta)) {
                 mkdir($carpeta, 0777, true);
             } else {
-                echo '<div><b>Error. La carpeta ya existe.</b></div>';
+                header("Location: ../Usuario/noticiaEqual.html");
             }
         }
         if (move_uploaded_file($temp, $rutaDestino)) {
-            $sql = "INSERT INTO noticia (id_user, titulo, descripcion, contenido, foto) VALUES ('$id','$titulo','$descripcion','$contenido', '$archivo_nombre')";
+            $sql = "INSERT INTO noticia (id_user, titulo, descripcion, contenido, imagen) VALUES ('$id','$titulo','$descripcion','$contenido', '$archivo_nombre')";
             $resultado = mysqli_query($conexion, $sql);
 
             if ($resultado) {
                 Header("Location: ../Usuario/index.php");
             } else {
-                echo "error en la consulta";
+                header("Location: ../Usuario/error404.html");
             }
 
             mysqli_close($conexion);
         } else {
             //Si no se ha podido subir la imagen, mostramos un mensaje de error
-            echo '<div><b>Ocurrió algún error al subir el fichero. No pudo guardarse.</b></div>';
+            header("Location: ../Usuario/error404.html");
         }
     }
 }

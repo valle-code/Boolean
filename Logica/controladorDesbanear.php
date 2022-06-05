@@ -6,6 +6,6 @@ $resultado=mysqli_query($conexion,$sql);
 if ($resultado) {
     Header("Location: ../Usuario/usuarios.php");
 } else {
-    echo "Error en la consulta";
+    header("Location: ../Usuario/error404.html");
 }
 ?>

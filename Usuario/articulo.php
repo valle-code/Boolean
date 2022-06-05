@@ -1,9 +1,17 @@
 <?php
 require("../Datos/conexion.php");
 session_start();
-
+if (isset($_SESSION['email'])) {
+    $email = $_SESSION['email'];
+    $sql_user = "SELECT * FROM usuario WHERE email = '$email'";
+    $resultado_user = mysqli_query($conexion, $sql_user) or die(mysqli_error($conexion));
+    $row_user = mysqli_fetch_array($resultado_user);
+} else {
+   $email = '';
+   $psw = '';
+}
 $id = $_GET['id'];
-$sql = "SELECT titulo, descripcion, contenido, noticia.foto AS imagen, nombre, apellidos FROM noticia INNER JOIN usuario ON usuario.id = id_user AND noticia.id = '$id'";
+$sql = "SELECT * FROM noticia INNER JOIN usuario ON usuario.id = id_user AND noticia.id = '$id'";
 $resultado = mysqli_query($conexion, $sql);
 $fila = mysqli_fetch_array($resultado);
 ?>
@@ -50,15 +58,18 @@ $fila = mysqli_fetch_array($resultado);
         <section>
             <article>
                 <h1 id = "head"><?php echo ($fila['titulo']) ?></h1><br>
-                <p><?php echo ($fila['contenido']) ?></p><br><br>
+                <div id="centrar-perfil-autor">
+                    <div id="perfil-author">
+                        <img src="./imagenes/<?php echo ($fila['foto']) ?>" class="autor" width = "75px" heigth = "75px"/>
+                        <h5><?php echo ($fila['nombre'] . ' ' . $fila['apellidos']) ?></h5><br>
+                    </div>
+                </div>
+                <p><?php echo ($fila['contenido']) ?></p><br><br>    
             </article>
             <article>
                 <div id="imagen">
                     <img id = "img-Articulo" src="./Resources/Noticias/<?php echo ($fila['titulo']) ?>/<?php echo ($fila['imagen']) ?>"  width = "700px" heigth = "700px">
                 </div><br>
-                <footer>
-                        <?php echo("Hecho por ".$fila['nombre'].' '.$fila['apellidos'])?>
-                </footer>
             </article>
         </section>
         

@@ -73,6 +73,14 @@
   box-shadow: rgba(0, 0, 0, 0.35) 0px 20px 50px;
 }
 
+#cajaMod {
+  width: 400px;
+  height: 600px;
+  border: solid white;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 20px 50px;
+}
+
 #mensaje {
   width: 82%;
   padding: 6px 12px;
@@ -377,6 +385,7 @@ input[type="submit"] {
   background-size: cover;
   box-sizing: border-box;
   justify-content: inline-block;
+  align-items: center;
 }
 
 #buscar {
@@ -410,15 +419,14 @@ body {
 }
 
 .responsive {
-  background-image: url(./imagenes/website-background-image-size-psd-vector-photo.jpg);
+  background-image: url(./imagenes/website-background-image-size-psd-vector-photo_waifu2x_art_noise3_scale_tta_1.png);
   background-position: center;
-  background-size: cover;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
   width: 100vw;
-  height: 100vh;
+  height: 200vh;
+  padding: 0;
 }
 
 /* .imgwrapper {
@@ -433,24 +441,21 @@ body {
   margin-left: 21px;
 }
 
-.imgPerfil {
+.arregloPerfil {
   display: flex;
-  justify-content: center;
+  flex-direction: row;
   align-items: center;
-  height: 30%;
-  position: relative;
+  justify-content: center;
+  width: 100%;
+  height: 300px;
 }
 
 .perfil{
   color:rgb(255, 255, 255);
   width: 25%;
   height: 75%;
-  background-position: center;
-  background-size: cover;
-  box-sizing: border-box;
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
 .imgPerfil{
@@ -461,7 +466,6 @@ body {
 .perfil-img{
   display: flex;
   justify-content: center;
-  width: 100%;
   background-position: center;
   background-size: cover;
   box-sizing: border-box;
@@ -479,7 +483,12 @@ body {
 }
 
 .input {
-  width: 88%;
+  width: 100%;
+  padding: 6px 12px;
+  margin-left: 20px;
+  border-radius: 5px;
+  text-align: center;
+  color: black;
 }
 
 #guardar {
@@ -494,7 +503,6 @@ body {
   justify-content: center;
   align-items: center;
   width: 100vw;
-  height: 100vh;
 }
 
 .foro {
@@ -559,10 +567,10 @@ textarea {
   align-items: center;
 }
 
-/* body {
+body {
   background-image: url(./imagenes/website-background-image-size-psd-vector-photo_waifu2x_art_noise3_scale_tta_1.png);
 
-} */
+}
 
 #background-wrapper{
   background-image: url(./imagenes/website-background-image-size-psd-vector-photo_waifu2x_art_noise3_scale_tta_1.png);
@@ -573,12 +581,10 @@ textarea {
   flex-flow: wrap;
   background-repeat: repeat;
   width: 100vw;
-  height: 100vh;
 }
 
 section {
   display: flex;
-  justify-content: center;
   text-align: justify;
   align-items: center;
   flex-direction: column;
@@ -587,7 +593,6 @@ section {
   padding-left: 5%;
   padding-right: 5%;
   width: 80%;
-
 }
 
 #head {
@@ -674,6 +679,58 @@ th{
 #ban-p {
   font-size: 30px;
 }
+
+#padreMod {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+#cajaMod {
+  width: 400px;
+  height: 430px;
+  border: solid white;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+#containerMod {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-image: url(./imagenes/website-background-image-size-psd-vector-photo_waifu2x_art_noise3_scale_tta_1.png);
+}
+
+#centrar-perfil-autor {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#perfil-autor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.autor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+}
+
+#user{
+  border-radius: 100%;
+}
+
 
 
 
