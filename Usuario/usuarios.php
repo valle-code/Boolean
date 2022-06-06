@@ -90,7 +90,8 @@ if (isset($_SESSION['email'])) {
                             <th></th>
                         </div>
                     </tr>
-                </thead <tbody>
+                </thead> 
+                <tbody>
                 <?php
                 if ($resultado) {
                     while ($fila = mysqli_fetch_array($resultado)) {

@@ -38,6 +38,15 @@ if (isset($_SESSION['email'])) {
                     <li class="barra">
                         <a href="./contacto.php" class="decBarra">Contacto</a>
                     </li>
+                    <?php
+                    if ($email != '') {
+                        if ($row_user['estado'] == 'admin' ) { 
+                    ?>
+                        <li class="barra">
+                            <a href="./usuarios.php" class="decBarra">Usuarios</a>
+                        </li>
+                    <?php } 
+                    }?>
                 </ul>
             </nav>
         </div><br><br>
@@ -57,11 +66,10 @@ if (isset($_SESSION['email'])) {
               <input type="text" name="apellido" id="apellido" class = "input" placeholder="Apellido" value = "<?php echo $row_user['apellidos']?>" required onkeyup = "validarTexto()"/><br><br>
               <div class="aviso">
                 <p class = "warning" id = "warning3"></p>
-              </div><br>
-              <label for>Foto</label>
+              </div>
               <div class="lol">
                 <input type="file" name="foto" id="foto" value = "<?php echo $row_user['foto']?>" class = "input"/>
-              </div><br><br>
+              </div><br>
               <input type="submit" value="Guardar" id = "guardar" name = "guardar" onclick = "checkInputs()"/><br><br>
               <div class="aviso">
                 <p class = "warning" id = "warning6"></p>

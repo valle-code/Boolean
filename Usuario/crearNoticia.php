@@ -30,13 +30,13 @@ if (isset($_SESSION['email'])) {
             <h1>Información del foro</h1>
             <br>
             <div class="caja" id="caja1">
-              <h2>Título</h2>
+              <h2 class = "label">Título</h2>
               <br>
               <input type="text" name="nombre" id = "nombre" placeholder="Nombre del foro..." required maxlength="20"/>
               <div class="aviso">
                 <p class = "warning" id = "warning1"></p>
               </div><br>
-              <h2>Contenido</h2>
+              <h2 class = "label">Contenido</h2>
               <br>
               <textarea id="contenido" name ="contenido" rows="20" cols="100" placeholder="Contenido" maxlength="4000"></textarea><br><br><br>
               <div class="aviso">
@@ -49,7 +49,7 @@ if (isset($_SESSION['email'])) {
             <h1>Información del administrador</h1>
             <br>
             <div class="caja" id="caja3">
-              <h2>Foto</h2>
+              <h2 class = "label">Foto</h2>
               <br>
               <input name="archivo" id="archivo" type="file" required/><br>
               <div class="aviso">
@@ -57,7 +57,7 @@ if (isset($_SESSION['email'])) {
               </div><br>
             </div>
             <div class="caja" id="caja4">
-              <h2>Descripcion</h2>
+              <h2 class = "label">Descripcion</h2>
               <br>
               <textarea id="descripcion" name ="descripcion" rows="4" cols="100" placeholder="Breve descripcion.... " maxlength="300"></textarea><br><br>
               <div class="aviso">

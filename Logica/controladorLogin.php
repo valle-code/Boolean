@@ -1,12 +1,10 @@
 <?php
 require("../Datos/conexion.php");
 
-// sistema de login
 if (isset($_POST['login'])) {
     $email = $_POST['email'];
     $psw = $_POST['psw'];
     $hash = hash('ripemd160', $psw);
-    // comprobar que no hay nulos
     if (empty($_POST['email']) || empty($_POST['psw'])) {
         header("Location: ../Usuario/error404.html");
     } else {
