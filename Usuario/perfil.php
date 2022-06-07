@@ -52,7 +52,7 @@ if (isset($_SESSION['email'])) {
       </div>
       <div class="arregloPerfil">
       <div class="perfil">   
-          <form action = "../Logica/controladorPerfil.php?id=<?php echo $row_user['id']?>" method="POST" enctype="multipart/form-data">
+          <form action = "../Logica/controladorPerfil.php?id=<?php echo $row_user['id_usuario']?>" method="POST" enctype="multipart/form-data">
             <div class="perfil-info">
               <label for>Nombre</label>
               <input type="text" name="nombre" id="nombre" class = "input" placeholder="Nombre" value = "<?php echo $row_user['nombre']?>" required onkeyup = "validarTexto()"/><br><br>

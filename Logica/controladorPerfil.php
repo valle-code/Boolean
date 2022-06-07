@@ -16,7 +16,7 @@ if (isset($archivo_nombre) && $archivo_nombre != "") {
         //Si la extensión de la imagen es correcta, se intenta subir al servidor y crear uan carpeta con el nombre del usuario
         if (move_uploaded_file($temp, $rutaDestino)) {
 
-            $sql = "UPDATE usuario SET nombre='$nombre', apellidos='$apellidos', foto='$archivo_nombre' WHERE id='$id'";
+            $sql = "UPDATE usuario SET nombre='$nombre', apellidos='$apellidos', foto='$archivo_nombre' WHERE id_usuario='$id'";
             $resultado = mysqli_query($conexion, $sql) or die(mysqli_error($conexion));
 
             if ($resultado) {
@@ -33,7 +33,7 @@ if (isset($archivo_nombre) && $archivo_nombre != "") {
         }
     }
 } else {
-    $sql = "UPDATE usuario SET nombre='$nombre', apellidos='$apellidos' WHERE id='$id'";
+    $sql = "UPDATE usuario SET nombre='$nombre', apellidos='$apellidos' WHERE id_usuario='$id'";
     $resultado = mysqli_query($conexion, $sql) or die(mysqli_error($conexion));
 
     if ($resultado) {

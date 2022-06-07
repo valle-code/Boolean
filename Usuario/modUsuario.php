@@ -5,7 +5,7 @@ require("../Datos/conexion.php");
 $id = $_GET['id'];
 
 
-$sql = "SELECT * FROM usuario WHERE id = '$id'";
+$sql = "SELECT * FROM usuario WHERE id_usuario = '$id'";
 $resultado = mysqli_query($conexion, $sql);
 
 $row = mysqli_fetch_array($resultado);
@@ -24,7 +24,7 @@ $row = mysqli_fetch_array($resultado);
     <div class="padre">
       <a title="atras" href="./usuarios.php"><img src="./imagenes/icons8-atrás-100.png" alt="atrás"/></a>
       <div id="cajaMod">
-        <form action="../Logica/controladorActualizar.php?id=<?php echo $row['id'] ?>" method="POST" id = "registro">
+        <form action="../Logica/controladorActualizar.php?id=<?php echo $row['id_usuario'] ?>" method="POST" id = "registro">
           <label for>Email:</label>
           <input type="text" name="email" id="email" placeholder="email" value="<?php echo $row['email']?>"><br><br>  
           <label for>Nombre:</label>

@@ -4,10 +4,10 @@ $sql = "SELECT *  FROM noticia";
 $resultado = mysqli_query($conexion, $sql);
 if (isset($_POST['buscar'])) {
     $titulo = $_POST['busqueda'];
-    $sql = "SELECT * FROM noticia INNER JOIN usuario ON usuario.id = id_user WHERE titulo LIKE '%$titulo%' AND ban = 'No' ";
+    $sql = "SELECT * FROM noticia INNER JOIN usuario ON id_usuario = id_user WHERE titulo LIKE '%$titulo%' AND ban = 'No' ";
     $resultado = mysqli_query($conexion, $sql);
 } else {
-    $sql = "SELECT * FROM noticia INNER JOIN usuario ON usuario.id = id_user AND ban = 'No'";
+    $sql = "SELECT * FROM noticia INNER JOIN usuario ON id_usuario = id_user AND ban = 'No'";
     $resultado = mysqli_query($conexion, $sql);
 }
 ?>

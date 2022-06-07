@@ -14,7 +14,7 @@ if (isset($_SESSION['email'])) {
     $row_user['estado'] = '';
 }
 
-$sql = "SELECT * FROM noticia INNER JOIN usuario ON usuario.id = id_user AND ban = 'No' ORDER BY noticia.id DESC LIMIT 2";
+$sql = "SELECT * FROM noticia INNER JOIN usuario ON id_usuario = id_user AND ban = 'No' ORDER BY id DESC LIMIT 2";
 $resultado = mysqli_query($conexion, $sql);
 ?>
 <html>

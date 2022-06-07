@@ -6,14 +6,14 @@ if (isset($_SESSION['email'])) {
     $sql_user = "SELECT * FROM usuario WHERE email = '$email'";
     $resultado_user = mysqli_query($conexion, $sql_user) or die(mysqli_error($conexion));
     $row_user = mysqli_fetch_array($resultado_user);
-    $sql = "SELECT * FROM usuario ORDER BY id DESC";
+    $sql = "SELECT * FROM usuario ORDER BY id_usuario DESC";
     $resultado = mysqli_query($conexion, $sql);
     if (isset($_POST['buscar'])) {
         $nombre = $_POST['busqueda'];
-        $sql = "SELECT * FROM usuario WHERE nombre LIKE '%$nombre%' ORDER BY id DESC";
+        $sql = "SELECT * FROM usuario WHERE nombre LIKE '%$nombre%' ORDER BY id_usuario DESC";
         $resultado = mysqli_query($conexion, $sql);
     } else {
-        $sql = "SELECT * FROM usuario ORDER BY id DESC";
+        $sql = "SELECT * FROM usuario ORDER BY id_usuario DESC";
         $resultado = mysqli_query($conexion, $sql);
     }
 } else {
@@ -104,11 +104,11 @@ if (isset($_SESSION['email'])) {
                             <th><?php echo $fila['ban'] ?></th>
                             <th><?php echo $fila['estado'] ?></th>
                             <?php if ($fila['ban'] == 'No') { ?>
-                                <th><a href="./modUsuario.php?id=<?php echo $fila['id'] ?>" id="editar"><img src="../Usuario/imagenes/669869_edit_512x512.png" width="50px" heigth="50px"></a></th>
+                                <th><a href="./modUsuario.php?id=<?php echo $fila['id_usuario'] ?>" id="editar"><img src="../Usuario/imagenes/669869_edit_512x512.png" width="50px" heigth="50px"></a></th>
                             <?php } else { ?>
-                                <th><a href="../Logica/controladorDesbanear.php?id=<?php echo $fila['id'] ?>" id="desbanear"><img src="../Usuario/imagenes/304167.png" width="50px" heigth="50px"></a></th>
+                                <th><a href="../Logica/controladorDesbanear.php?id=<?php echo $fila['id_usuario'] ?>" id="desbanear"><img src="../Usuario/imagenes/304167.png" width="50px" heigth="50px"></a></th>
                             <?php } ?>
-                            <th><a href="../Logica/controladorEliminar.php?id=<?php echo $fila['id'] ?>" id="banear"><img src="../Usuario/imagenes/2048px-High-contrast-edit-delete.svg.png" width="50px" heigth="50px"></a></th>
+                            <th><a href="../Logica/controladorEliminar.php?id=<?php echo $fila['id_usuario'] ?>" id="banear"><img src="../Usuario/imagenes/2048px-High-contrast-edit-delete.svg.png" width="50px" heigth="50px"></a></th>
                         </tr>
                     <?php
                     }

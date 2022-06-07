@@ -11,7 +11,7 @@ if (isset($_SESSION['email'])) {
    $psw = '';
 }
 $id = $_GET['id'];
-$sql = "SELECT * FROM noticia INNER JOIN usuario ON usuario.id = id_user AND noticia.id = '$id'";
+$sql = "SELECT * FROM noticia INNER JOIN usuario ON id_usuario = id_user AND id = '$id'";
 $resultado = mysqli_query($conexion, $sql);
 $fila = mysqli_fetch_array($resultado);
 ?>
