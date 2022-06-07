@@ -48,8 +48,9 @@ if (isset($_SESSION['email'])) {
           <div class="grupo" id="grupo2">
             <h1>Información del administrador</h1>
             <br>
+            <h2 class = "label" id = "labelfoto">Foto</h2>
             <div class="caja" id="caja3">
-              <h2 class = "label">Foto</h2>
+              
               <br>
               <input name="archivo" id="archivo" type="file" required/><br>
               <div class="aviso">

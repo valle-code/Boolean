@@ -724,12 +724,24 @@ th{
   color: white;
 }
 
+#ban-title, #ban-text {
+  margin-left: 20px;
+}
+
 #baneado {
   font-size: 70px;
 }
 
 #ban-p {
   font-size: 30px;
+}
+
+#caja3 {
+  margin-left: 20px;
+}
+
+#labelfoto {
+  margin-left: 10px;
 }
 
 #padreMod {
@@ -748,7 +760,6 @@ th{
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 
 #containerMod {
