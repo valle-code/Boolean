@@ -8,8 +8,8 @@ $hash = hash('ripemd160', $psw);
 $psw2 = $_POST['psw2'];
 
 if (isset($_POST['enviar'])) {
-    // comprobar que no hay nulos
-    if (empty($_POST['nombre']) || empty($_POST['apellidos']) || empty($_POST['email']) || empty($_POST['psw']) || empty($_POST['psw2'])) {
+    // comprobar que no hay nulos y que email contenga @
+    if (empty($_POST['nombre']) || empty($_POST['apellidos']) || empty($_POST['email']) || empty($_POST['psw']) || empty($_POST['psw2']) || !strpos($email, '@') || strlen($psw) < 8 || strlen($psw2) < 8) {
         header("Location: ../Usuario/error404.html");
     } else {
         $sql = "SELECT * FROM usuario WHERE email = '$email'";

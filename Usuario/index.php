@@ -9,22 +9,23 @@ if (isset($_SESSION['email'])) {
     $resultado_user = mysqli_query($conexion, $sql_user) or die(mysqli_error($conexion));
     $row_user = mysqli_fetch_array($resultado_user);
 } else {
-   $email = '';
-   $psw = '';
-   $row_user['estado'] = '';
+    $email = '';
+    $psw = '';
+    $row_user['estado'] = '';
 }
 
-$sql = "SELECT * FROM noticia ORDER BY id DESC LIMIT 2";
+$sql = "SELECT * FROM noticia INNER JOIN usuario ON usuario.id = id_user AND ban = 'No' ORDER BY noticia.id DESC LIMIT 2";
 $resultado = mysqli_query($conexion, $sql);
 ?>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
     <link rel="stylesheet" type="text/css" href="estilos.css" title="style" />
     <!-- normalize css -->
-    
+
     <!--favicon-->
     <link rel="shortcut icon" href="./imagenes/favicon.png" type="image/x-icon">
     <title>Home</title>
@@ -33,38 +34,48 @@ $resultado = mysqli_query($conexion, $sql);
 <body>
     <!--Barra de navegación-->
     <div class="contenedor">
-        <div class="navegacion">
-            <a href = "./index.php"><img src="./imagenes/LogoDani-02.png" class="logo"/></a>
-            <nav>
-                <ul>
-                    <li class="barra">
-                        <a href="./noticias.php" class="decBarra">Noticias</a>
-                    </li>
-                  
-                    <li class="barra">
-                        <a href="./crearNoticia.php" class="decBarra">Crear</a>
-                    </li>
-                    <li class="barra">
-                        <a href="./perfil.php "class="decBarra">Perfil</a>
-                    </li>
-                    
-                    <li class="barra">
-                        <a href="./contacto.php" class="decBarra">Contacto</a>
-                    </li>
-
-                    <?php
-                    if ($email != '') {
-                        if ($row_user['estado'] == 'admin' ) { 
-                    ?>
-                        <li class="barra">
-                            <a href="./usuarios.php" class="decBarra">Usuarios</a>
+        <div id="nav-row">
+            <div class="navegacion">
+                <a href="./index.php"><img src="./imagenes/LogoDani-02.png" class="logo" /></a>
+                <nav>
+                    <ul>
+                        <li class="barra" id="barra1">
+                            <a href="./noticias.php" class="decBarra">Noticias</a>
                         </li>
-                    <?php } 
-                    }?>
-                </ul>
-            </nav>
+
+                        <li class="barra" id="barra2">
+                            <a href="./crearNoticia.php" class="decBarra">Crear</a>
+                        </li>
+                        <!-- <li class="barra">
+                        <a href="./perfil.php "class="decBarra">Perfil</a>
+                    </li> -->
+
+                        <li class="barra" id="barra3">
+                            <a href="./contacto.php" class="decBarra">Contacto</a>
+                        </li>
+
+                        <?php
+                        if ($email != '') {
+                            if ($row_user['estado'] == 'admin') {
+                        ?>
+                                <li class="barra" id="barra4">
+                                    <a href="./usuarios.php" class="decBarra">Usuarios</a>
+                                </li>
+                        <?php }
+                        } ?>
+
+
+                    </ul>
+                </nav>
+            </div>
+            <!-- identificación de la cuenta en index -->
+            <div class="identificacion">
+                <?php if ($email != '') { ?>
+                    <a href = "./perfil.php"><img src="./imagenes/<?php echo $row_user['foto']; ?>" id="imgId" heigth = "50px" width = "50px"/></a>
+                <?php } ?>
+            </div>
         </div>
-        <!--Columna izquierda-->      
+        <!--Columna izquierda-->
         <main>
             <div class="columna">
                 <h1 id="boolean">Boolean</h1>
@@ -85,28 +96,28 @@ $resultado = mysqli_query($conexion, $sql);
                 </div>
             </div>
             <!--Columna derecha-->
-            <div class="columna" id = "noticias">
-                    <div class="arreglo">
-                    <?php 
-                        if ($resultado) {
-                            while ($fila = mysqli_fetch_array($resultado)) {
+            <div class="columna" id="noticias">
+                <div class="arreglo">
+                    <?php
+                    if ($resultado) {
+                        while ($fila = mysqli_fetch_array($resultado)) {
                     ?>
-                        <a href = "./articulo.php?id=<?php echo $fila['id'] ?>">
-                            <div class="wrapper" style="background-image: url('Resources/Noticias/<?php echo($fila['titulo'])?>/<?php echo($fila['imagen'])?>')">
-                            <h5><?php echo($fila['titulo']) ?></h5>
-                            <p>
-                                <?php echo($fila['descripcion']) ?>
-                            </p>
-                            </div>
-                        </a>
-                        <?php
-                            }
+                            <a href="./articulo.php?id=<?php echo $fila['id'] ?>">
+                                <div class="wrapper" style="background-image: url('Resources/Noticias/<?php echo ($fila['titulo']) ?>/<?php echo ($fila['imagen']) ?>')">
+                                    <h5><?php echo ($fila['titulo']) ?></h5>
+                                    <p>
+                                        <?php echo ($fila['descripcion']) ?>
+                                    </p>
+                                </div>
+                            </a>
+                    <?php
                         }
-                        ?>
-                    </div>
+                    }
+                    ?>
                 </div>
             </div>
-        </main>
+    </div>
+    </main>
     </div>
 </body>
 

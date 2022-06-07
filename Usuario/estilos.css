@@ -125,6 +125,22 @@ nav ul li {
   padding: 30px;
 }
 
+#nav-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.identificacion {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  width: 400px;
+  height: 50px;
+}
+
 li:hover {
   background-color: rgba(64, 0, 255, 0.301);
 }
@@ -742,6 +758,10 @@ th{
 
 #labelfoto {
   margin-left: 10px;
+}
+
+#imgId {
+  border-radius: 100%
 }
 
 #padreMod {

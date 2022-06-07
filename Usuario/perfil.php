@@ -33,9 +33,6 @@ if (isset($_SESSION['email'])) {
                         <a href="./crearNoticia.php" class="decBarra">Crear</a>
                     </li>
                     <li class="barra">
-                        <a href="./perfil.php" class="decBarra">Perfil</a>
-                    </li>
-                    <li class="barra">
                         <a href="./contacto.php" class="decBarra">Contacto</a>
                     </li>
                     <?php
@@ -61,7 +58,7 @@ if (isset($_SESSION['email'])) {
               <input type="text" name="nombre" id="nombre" class = "input" placeholder="Nombre" value = "<?php echo $row_user['nombre']?>" required onkeyup = "validarTexto()"/><br><br>
               <div class="aviso">
                 <p class = "warning" id = "warning2"></p>
-              </div><br>
+              </div>
               <label for>Apellidos</label>
               <input type="text" name="apellido" id="apellido" class = "input" placeholder="Apellido" value = "<?php echo $row_user['apellidos']?>" required onkeyup = "validarTexto()"/><br><br>
               <div class="aviso">
