@@ -133,6 +133,7 @@ nav ul li {
 }
 
 .identificacion {
+  margin-left: 195px;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;

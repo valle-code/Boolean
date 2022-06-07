@@ -25,7 +25,7 @@ if (isset($_SESSION['email'])) {
     <div class="fondo">
       <div class="foro">
         <a title="atras" href="./index.php"><img src="./imagenes/icons8-atrás-100.png" alt="atrás" /></a>
-        <form action="../Logica/controladorCrear.php?id=<?php echo $row_user['id'] ?>" method="POST" enctype="multipart/form-data">
+        <form action="../Logica/controladorCrear.php?id=<?php echo $row_user['id_usuario'] ?>" method="POST" enctype="multipart/form-data">
           <div class="grupo" id="grupo1">
             <h1>Información del foro</h1>
             <br>

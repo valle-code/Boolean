@@ -71,7 +71,7 @@ $resultado = mysqli_query($conexion, $sql);
             <!-- identificación de la cuenta en index -->
             <div class="identificacion">
                 <?php if ($email != '') { ?>
-                    <a href = "./perfil.php"><img src="./imagenes/<?php echo $row_user['foto']; ?>" id="imgId" heigth = "50px" width = "50px"/></a>
+                    <a href = "./perfil.php"><img src="./imagenes/<?php echo $row_user['foto']; ?>" id="imgId" heigth = "75px" width = "75px"/></a>
                 <?php } ?>
             </div>
         </div>
