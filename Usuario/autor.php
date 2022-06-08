@@ -61,7 +61,7 @@ if ($registros == 0) {
       </nav>
     </div><br><br>
     <div class="perfil-autor">
-      <img class=imgPerfil src="./imagenes/<?php echo ($fila['foto']) ?>" heigth="200px" width="200px" alt="Cambia tu imagen de perfil" /><br>
+      <img class=imgPerfil src="./imagenes/<?php echo ($fila['foto']) ?>" heigth="110px" width="110px" alt="Cambia tu imagen de perfil" /><br>
       <div class="nombreAutor"><h1><?php echo($fila['nombre'].' '.$fila['apellidos']) ?></h1></div>
     </div><br>
     <div class="info-autor">

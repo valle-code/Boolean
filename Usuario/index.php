@@ -63,8 +63,6 @@ $resultado = mysqli_query($conexion, $sql);
                                 </li>
                         <?php }
                         } ?>
-
-
                     </ul>
                 </nav>
             </div>
