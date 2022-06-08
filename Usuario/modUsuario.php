@@ -26,15 +26,15 @@ $row = mysqli_fetch_array($resultado);
       <div id="cajaMod">
         <form action="../Logica/controladorActualizar.php?id=<?php echo $row['id_usuario'] ?>" method="POST" id = "registro">
           <label for>Email:</label>
-          <input type="text" name="email" id="email" placeholder="email" value="<?php echo $row['email']?>"><br><br>  
+          <input type="text" name="email" id="email" placeholder="email" class="inputTexto" value="<?php echo $row['email']?>"><br><br>  
           <label for>Nombre:</label>
-          <input type="text" name="nombre" id="nombre" placeholder="Nombre" value="<?php echo $row['nombre']?>"><br><br>   
+          <input type="text" name="nombre" id="nombre" placeholder="Nombre" class="inputTexto"  value="<?php echo $row['nombre']?>"><br><br>   
           <label for>Apellidos:</label>
-          <input type="text" name="apellidos" id="apellidos" placeholder="apellidos" value="<?php echo $row['apellidos']?>"><br><br>    
+          <input type="text" name="apellidos" id="apellidos" placeholder="apellidos" class="inputTexto" value="<?php echo $row['apellidos']?>"><br><br>    
           <label for>Baneado</label>
-          <input type="text" name="ban" id="ban" value="<?php echo $row['ban']?>"><br><br>
+          <input type="text" name="ban" id="ban" class="inputTexto" value="<?php echo $row['ban']?>"><br><br>
           <label for>Estado</label>
-          <input type="text" name="estado" id="estado" value="<?php echo $row['estado']?>"><br><br>
+          <input type="text" name="estado" id="estado" class="inputTexto" value="<?php echo $row['estado']?>"><br><br><br>
           <input type="submit" name="actualizar" id="actualizar" value="Actualizar"/><br><br>
         </form>
       </div>

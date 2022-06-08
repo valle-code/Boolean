@@ -14,25 +14,25 @@
         <div class = "padre">  
           <div id = "logcaja">
             <form action="../Logica/controladorLogin.php" method="post" id = "loginForm">
+            <div id = "centrar">
+                <a title="atras" href="./index.php"><img src="./imagenes/LogoDani-02.png" alt="atrás" heigth = "200px" width = "200px"/></a>
+            </div>
             <div id = "campos">
-                <label for>Email:</label>
-                <input type="text" name="email" id="email" class = "loginputs" required onkeyup="validarEmail()"/><br><br>
+                <label for class = "labelRegistro">Email:</label>
+                <input type="text" name="email" id="email" class = "inputTexto" required onkeyup="validarEmail()"/><br><br>
                 <div class="aviso">
                     <p class = "warning" id = "warning6"></p>
                 </div><br>
-                <label>Contraseña:</label>
-                <input type="password" name="psw" id="psw" class = "loginputs" required onkeyup="validarPsw()"/><br><br>
+                <label class = "labelRegistro">Contraseña:</label>
+                <input type="password" name="psw" id="psw" class = "inputTexto" required onkeyup="validarPsw()"/><br><br>
                 <div class="aviso">
                     <p class = "warning" id = "warning1"></p>
-                </div><br>
-                <input type="submit" name="login" id="login" value = "login" onclick="checkInputs()"><br><br><br><br>
+                </div><br><br>
+                <input type="submit" name="login" id="login" value = "Login" onclick="checkInputs()"><br><br>
                 <div class="aviso">
                     <p class = "warning" id = "warning2"></p>
                 </div><br><br>
             </div><br><br>
-            <div id = "centrar">
-                <a title="atras" href="./index.php"><img src="./imagenes/LogoDani-02.png" alt="atrás" heigth = "200px" width = "200px"/></a>
-            </div>
             </form>
            </div>
         </div>

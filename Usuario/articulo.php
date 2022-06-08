@@ -60,7 +60,7 @@ $fila = mysqli_fetch_array($resultado);
                 <h1 id = "head"><?php echo ($fila['titulo']) ?></h1><br>
                 <div id="centrar-perfil-autor">
                     <div id="perfil-author">
-                        <img src="./imagenes/<?php echo ($fila['foto']) ?>" class="autor" width = "75px" heigth = "75px"/>
+                        <a href = "./autor.php?id=<?php echo $fila['id_usuario'] ?>"><img src="./imagenes/<?php echo ($fila['foto']) ?>" class="autor" width = "75px" heigth = "75px"/><a>
                         <h5><?php echo ($fila['nombre'] . ' ' . $fila['apellidos']) ?></h5><br>
                     </div>
                 </div>

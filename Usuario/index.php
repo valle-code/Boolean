@@ -87,12 +87,16 @@ $resultado = mysqli_query($conexion, $sql);
                 </p>
                 <br><br>
                 <div id="botones">
-                    <?php if ($email != '') { ?>
-                        <a href="../Logica/controladorCerrar.php" class="boton">Cerrar sesión</a>
-                    <?php } else { ?>
-                        <a href="./login.php" class="boton">Iniciar sesión</a>
-                    <?php } ?>
-                    <a href="./registro.php" class="boton">Registrarse</a>
+                    <div class="btnLogin">
+                        <?php if ($email != '') { ?>
+                            <a href="../Logica/controladorCerrar.php" class="boton">Cerrar sesión</a>
+                        <?php } else { ?>
+                            <a href="./login.php" class="boton">Iniciar sesión</a>
+                        <?php } ?>
+                    </div>
+                    <div class="btnReg">
+                        <a href="./registro.php" class="boton">Registrarse</a>
+                    </div>
                 </div>
             </div>
             <!--Columna derecha-->

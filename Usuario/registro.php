@@ -15,32 +15,33 @@
       <a title="atras" href="./index.php"><img src="./imagenes/icons8-atrás-100.png" alt="atrás"/></a>
       <div id="caja">
         <form action="../Logica/controladorRegistro.php" method="post" id = "registro">
-          <label for>Email:</label>
+          <br>
+          <label for class = "labelRegistro">Email:</label>
           <input type="text" name="email" id="email" class="inputTexto" required onkeyup="validarEmail()"/><br><br>
           <div class="aviso">
             <p class = "warning" id = "warning1"></p>
           </div><br>     
-          <label for>Nombre:</label>
+          <label for class = "labelRegistro">Nombre:</label>
           <input type="text" name="nombre" id="nombre" class="inputTexto" required/><br><br>
           <div class="aviso">
             <p class = "warning" id = "warning2"></p>
           </div><br>     
-          <label for>Apellidos:</label>
+          <label for class = "labelRegistro">Apellidos:</label>
           <input type="text" name="apellidos" id="apellidos" class="inputTexto" required/><br><br>
           <div class="aviso">
             <p class = "warning" id = "warning3"></p>
           </div><br>     
-          <label for>Contraseña:</label>
-          <input type="password" name="psw" id="psw" minlength = "8" maxlength = "16" required onkeyup="validarPsw()"/><br><br>
+          <label for class = "labelRegistro">Contraseña:</label>
+          <input type="password" name="psw" id="psw" minlength = "8" maxlength = "16" class="inputTexto" required onkeyup="validarPsw()"/><br><br>
           <div class="aviso">
             <p class = "warning" id = "warning4"></p>
           </div><br>     
-          <label for>Confirmar contraseña:</label>
-          <input type="password" name="psw2" id="psw2" placeholder="Escriba de nuevo su contraseña" minlength = "8" maxlength = "16" required/><br><br>
+          <label for class = "labelRegistro">Confirmar contraseña:</label>
+          <input type="password" name="psw2" id="psw2" class="inputTexto" minlength = "8" maxlength = "16" required onkeyup="validarEquals()"/><br><br>
           <div class="aviso">
             <p class = "warning" id = "warning5"></p>
           </div><br>     
-          <input type="submit" name="enviar" id="enviar" value="Registrarse" onclick="checkInputs()"/><br><br>
+          <input type="submit" name="enviar" id="enviar" value="Registrarse" class = "submit-border" onclick="checkInputs()"/><br>
           <div class="aviso">
             <p class = "warning" id = "warning6"></p>
           </div> 

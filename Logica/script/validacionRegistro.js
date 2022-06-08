@@ -26,6 +26,31 @@ function validarPsw() {
   }, 300);
 }
 
+function validarEquals() {
+  var psw = document.getElementById("psw").value;
+  var psw2 = document.getElementById("psw2").value;
+  let tiempo = null;
+  clearTimeout(tiempo);
+  tiempo = setTimeout(() => {
+    checkEquals(psw, psw2);
+  }, 300);
+}
+
+function checkEquals(psw, psw2) {
+  var valido = false;
+  if (psw.value != psw2.value) {
+    valido = true;
+  } else {
+    document.getElementById("warning5").innerHTML = "";
+  }
+
+  if (valido) {
+    document.getElementById("warning5").innerHTML = "Las contraseñas no coinciden";
+  } else {
+    document.getElementById("warning5").innerHTML = "";
+  }
+}
+
 function checkInputs() {
   var nombre = document.getElementById("nombre");
   var apellidos = document.getElementById("apellidos");
@@ -83,10 +108,7 @@ function checkPsw(psw) {
 
   if (psw.length >= 8) {
     console.log("entra");
-    while (
-      i < caracteresRaros.length &&
-      !psw.includes(caracteresRaros[i]) &&
-      !psw.includes(numeros[i])
+    while (i < caracteresRaros.length && !psw.includes(caracteresRaros[i]) && !psw.includes(numeros[i])
     ) {
       if (psw.includes(caracteresRaros[i]) && psw.includes(numeros[i])) {
         valido = true;

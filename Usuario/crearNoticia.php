@@ -38,7 +38,7 @@ if (isset($_SESSION['email'])) {
               </div><br>
               <h2 class = "label">Contenido</h2>
               <br>
-              <textarea id="contenido" name ="contenido" rows="20" cols="100" placeholder="Contenido" maxlength="4000"></textarea><br><br><br>
+              <textarea id="contenido" name ="contenido" rows="20" cols="100" placeholder="Contenido" maxlength="8000"></textarea><br><br><br>
               <div class="aviso">
                 <p class = "warning" id = "warning1"></p>
               </div>
@@ -65,7 +65,7 @@ if (isset($_SESSION['email'])) {
                 <p class = "warning" id = "warning1"></p>
             </div><br>
             </div>
-            <input type="submit" name="aceptar"  id = "aceptar" value="Aceptar" onclick="checkInputs()"/><br><br>
+            <input type="submit" name="aceptar"  id = "aceptar" value="Aceptar" class = "crear-input" onclick="checkInputs()"/><br><br>
             <div class="aviso">
               <p class = "warning" id = "warning6"></p>
             </div><br>

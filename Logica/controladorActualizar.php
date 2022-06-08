@@ -12,7 +12,7 @@ if (isset($_POST['actualizar'])) {
         $email=$_POST['email'];
         $estado=$_POST['estado'];
         $ban = $_POST['ban'];
-        $sql="UPDATE usuario SET nombre='$nombre', apellidos='$apellidos', email='$email', ban='$ban', estado='$estado' WHERE id='$id'";
+        $sql="UPDATE usuario SET nombre='$nombre', apellidos='$apellidos', email='$email', ban='$ban', estado='$estado' WHERE id_usuario='$id'";
         $resultado=mysqli_query($conexion,$sql) or die(mysqli_error($conexion));
 
         if($resultado){

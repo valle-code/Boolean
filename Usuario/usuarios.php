@@ -90,34 +90,35 @@ if (isset($_SESSION['email'])) {
                             <th></th>
                         </div>
                     </tr>
-                </thead> 
+                </thead>
                 <tbody>
-                <?php
-                if ($resultado) {
-                    while ($fila = mysqli_fetch_array($resultado)) {
-                ?>
-                        <tr>
-                            <th><img src="../Usuario/imagenes/<?php echo $fila['foto'] ?>" id="user" heigth="50px" width="50px"></th>
-                            <th><?php echo $fila['nombre'] ?></th>
-                            <th><?php echo $fila['apellidos'] ?></th>
-                            <th><?php echo $fila['email'] ?></th>
-                            <th><?php echo $fila['ban'] ?></th>
-                            <th><?php echo $fila['estado'] ?></th>
-                            <?php if ($fila['ban'] == 'No') { ?>
-                                <th><a href="./modUsuario.php?id=<?php echo $fila['id_usuario'] ?>" id="editar"><img src="../Usuario/imagenes/669869_edit_512x512.png" width="50px" heigth="50px"></a></th>
-                            <?php } else { ?>
-                                <th><a href="../Logica/controladorDesbanear.php?id=<?php echo $fila['id_usuario'] ?>" id="desbanear"><img src="../Usuario/imagenes/304167.png" width="50px" heigth="50px"></a></th>
-                            <?php } ?>
-                            <th><a href="../Logica/controladorEliminar.php?id=<?php echo $fila['id_usuario'] ?>" id="banear"><img src="../Usuario/imagenes/2048px-High-contrast-edit-delete.svg.png" width="50px" heigth="50px"></a></th>
-                        </tr>
+                    <?php
+                    if ($resultado) {
+                        while ($fila = mysqli_fetch_array($resultado)) {
+                    ?>
+                            <tr>
+                                <th><a href="./autor.php?id=<?php echo $fila['id_usuario'] ?>"><img src="../Usuario/imagenes/<?php echo $fila['foto'] ?>" id="user" heigth="50px" width="50px"></a></th>
+                                <th><?php echo $fila['nombre'] ?></th>
+                                <th><?php echo $fila['apellidos'] ?></th>
+                                <th><?php echo $fila['email'] ?></th>
+                                <th><?php echo $fila['ban'] ?></th>
+                                <th><?php echo $fila['estado'] ?></th>
+                                <?php if ($fila['ban'] == 'No') { ?>
+                                    <th><a href="./modUsuario.php?id=<?php echo $fila['id_usuario'] ?>" id="editar"><img src="../Usuario/imagenes/669869_edit_512x512.png" width="50px" heigth="50px"></a></th>
+                                <?php } else { ?>
+                                    <th><a href="../Logica/controladorDesbanear.php?id=<?php echo $fila['id_usuario'] ?>" id="desbanear"><img src="../Usuario/imagenes/304167.png" width="50px" heigth="50px"></a></th>
+                                <?php } ?>
+                                <th><a href="../Logica/controladorEliminar.php?id=<?php echo $fila['id_usuario'] ?>" id="banear"><img src="../Usuario/imagenes/2048px-High-contrast-edit-delete.svg.png" width="50px" heigth="50px"></a></th>
+                            </tr>
+
+                        <?php
+                        }
+                    } else {
+                        ?>
+                        <h1>No se encuantran usuarios</h1>
                     <?php
                     }
-                } else {
                     ?>
-                    <h1>No se encuantran usuarios</h1>
-                <?php
-                }
-                ?>
                 </tbody>
             </table>
         </div>
