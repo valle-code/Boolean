@@ -24,9 +24,6 @@ $resultado = mysqli_query($conexion, $sql);
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
     <link rel="stylesheet" type="text/css" href="estilos.css" title="style" />
-    <!-- normalize css -->
-
-    <!--favicon-->
     <link rel="shortcut icon" href="./imagenes/favicon.png" type="image/x-icon">
     <title>Home</title>
 </head>
@@ -69,7 +66,7 @@ $resultado = mysqli_query($conexion, $sql);
             <!-- identificación de la cuenta en index -->
             <div class="identificacion">
                 <?php if ($email != '') { ?>
-                    <a href = "./perfil.php"><img src="./imagenes/<?php echo $row_user['foto']; ?>" id="imgId" heigth = "75px" width = "75px"/></a>
+                    <a href = "./perfil.php"><img src="./imagenes/<?php echo $row_user['foto']; ?>" id="imgId" heigth = "50px" width = "50px"/></a>
                 <?php } ?>
             </div>
         </div>

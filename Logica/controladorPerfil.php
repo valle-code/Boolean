@@ -2,8 +2,8 @@
 require("../Datos/conexion.php");
 
 $id = $_GET['id'];
-$nombre = $_POST['nombre'];
-$apellidos = $_POST['apellido'];
+$nombre = $_POST['nombre2'];
+$apellidos = $_POST['apellido2'];
 $archivo_nombre = $_FILES['foto']['name'];
 if (isset($archivo_nombre) && $archivo_nombre != "") {
     $tipo = $_FILES['foto']['type'];
@@ -13,7 +13,7 @@ if (isset($archivo_nombre) && $archivo_nombre != "") {
     if (!((strpos($tipo, "gif") || strpos($tipo, "jpeg") || strpos($tipo, "jpg") || strpos($tipo, "png")))) {
         header("Location: ../Usuario/error404.html");
     } else {
-        //Si la extensión de la imagen es correcta, se intenta subir al servidor y crear uan carpeta con el nombre del usuario
+        //Si la extensión de la imagen es correcta, se intenta subir al PC
         if (move_uploaded_file($temp, $rutaDestino)) {
 
             $sql = "UPDATE usuario SET nombre='$nombre', apellidos='$apellidos', foto='$archivo_nombre' WHERE id_usuario='$id'";

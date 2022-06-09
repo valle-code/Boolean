@@ -22,6 +22,7 @@ $fila = mysqli_fetch_array($resultado);
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="estilos.css" title="style" />
+    <link rel="shortcut icon" href="./imagenes/favicon.png" type="image/x-icon">
     <title><?php echo ($fila['titulo'])?></title>
 </head>
 

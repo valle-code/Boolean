@@ -18,6 +18,8 @@ $row = mysqli_fetch_array($resultado);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="./estilos.css" title="style" />
+    <link rel="shortcut icon" href="./imagenes/favicon.png" type="image/x-icon">
+    <title>Actualizar</title>
 </head>
 <body>
 <div id="container">

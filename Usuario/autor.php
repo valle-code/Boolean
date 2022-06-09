@@ -30,7 +30,8 @@ if ($registros == 0) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="./estilos.css" type="text/css" />
   <script src="../Logica/script/validacionPerfil.js"></script>
-  <title>Perfil</title>
+  <link rel="shortcut icon" href="./imagenes/favicon.png" type="image/x-icon">
+  <title><?php echo($fila['nombre'].' '.$fila['apellidos']) ?></title>
 </head>
 
 <body>

@@ -29,6 +29,7 @@ if (isset($_SESSION['email'])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="estilos.css" title="style" />
+    <link rel="shortcut icon" href="./imagenes/favicon.png" type="image/x-icon">
     <title>Usuarios</title>
 </head>
 
@@ -61,7 +62,7 @@ if (isset($_SESSION['email'])) {
             </div>
         </form>
         <div class="tabla">
-
+            <div id="insertar"><a href = "./insertar.php"><img id = "insertar-img" src="./imagenes/insertar.png"></a></div>
             <table class="table">
                 <thead>
                     <tr>
@@ -106,7 +107,7 @@ if (isset($_SESSION['email'])) {
                                 <?php if ($fila['ban'] == 'No') { ?>
                                     <th><a href="./modUsuario.php?id=<?php echo $fila['id_usuario'] ?>" id="editar"><img src="../Usuario/imagenes/669869_edit_512x512.png" width="50px" heigth="50px"></a></th>
                                 <?php } else { ?>
-                                    <th><a href="../Logica/controladorDesbanear.php?id=<?php echo $fila['id_usuario'] ?>" id="desbanear"><img src="../Usuario/imagenes/304167.png" width="50px" heigth="50px"></a></th>
+                                    <th><a  href="../Logica/controladorDesbanear.php?id=<?php echo $fila['id_usuario'] ?>" id="desbanear"><img src="../Usuario/imagenes/304167.png" width="50px" heigth="50px"></a></th>
                                 <?php } ?>
                                 <th><a href="../Logica/controladorEliminar.php?id=<?php echo $fila['id_usuario'] ?>" id="banear"><img src="../Usuario/imagenes/2048px-High-contrast-edit-delete.svg.png" width="50px" heigth="50px"></a></th>
                             </tr>
