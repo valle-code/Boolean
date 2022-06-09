@@ -1,2 +1,2 @@
 # Boolean 
-Boolean es un proyecto de primer año en Desarrollo de Aplicaciones Multiplataforma que tiene como proposito el crear un espacio en el que los usuarios puedan discutir sobre la veracidad de noticias, números de teléfono, posibles estafas, posible malware en emails etc (por eso se llama "Boolean"). El proyecto estará construido en PHP, SQL, JavaScript HTML y CSS.
+Boolean es un proyecto de primer año en Desarrollo de Aplicaciones Multiplataforma que tiene como proposito el crear un espacio en el que los usuarios puedan puedan subir artículos informativos sobre los eventos más o menos importantes que ocurren en nuestra sociedad. El proyecto estará construido en PHP, SQL, JavaScript HTML y CSS.
