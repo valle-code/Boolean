@@ -15,7 +15,7 @@
           <div id = "logcaja">
             <form action="../Logica/controladorLogin.php" method="post" id = "loginForm">
             <div id = "centrar">
-                <a title="atras" href="./index.php"><img src="./imagenes/LogoDani-02.png" alt="atrás" heigth = "200px" width = "200px"/></a>
+                <a title="atras" href="../index.php"><img src="./imagenes/LogoDani-02.png" alt="atrás" heigth = "200px" width = "200px"/></a>
             </div>
             <div id = "campos">
                 <label for class = "labelRegistro">Email:</label>

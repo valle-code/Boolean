@@ -37,7 +37,7 @@ if (isset($_POST['aceptar'])) {
                 $resultado = mysqli_query($conexion, $sql) or die(mysqli_error($conexion));
     
                 if ($resultado) {
-                    Header("Location: ../Usuario/index.php");
+                    Header("Location: ../index.php");
                 } else {
                     header("Location: ../Usuario/error404.html");
                 }

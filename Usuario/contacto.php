@@ -15,7 +15,7 @@
     <!--Barra de navegación-->
     <div id = "contenedorId">
         <div class="navegacion">
-            <a href = "./index.php"><img src="./imagenes/LogoDani-02.png" class="logo"/></a>
+            <a href = "../index.php"><img src="./imagenes/LogoDani-02.png" class="logo"/></a>
             <nav>
                 <ul>
                     <li class="barra">

@@ -30,7 +30,7 @@ $fila = mysqli_fetch_array($resultado);
     <div id="background-wrapper">
         <header>
         <div class="navegacion">
-          <a href = "./index.php"><img src="./imagenes/LogoDani-02.png" class="logo"/></a>
+          <a href = "../index.php"><img src="./imagenes/LogoDani-02.png" class="logo"/></a>
             <nav>
                 <ul>
                     <li class="barra">
@@ -57,21 +57,23 @@ $fila = mysqli_fetch_array($resultado);
             </nav>
         </header>
         <section>
-            <article>
-                <h1 id = "head"><?php echo ($fila['titulo']) ?></h1><br>
-                <div id="centrar-perfil-autor">
-                    <div id="perfil-author">
-                        <a href = "./autor.php?id=<?php echo $fila['id_usuario'] ?>"><img src="./imagenes/<?php echo ($fila['foto']) ?>" class="autor" width = "75px" heigth = "75px"/><a>
-                        <h5><?php echo ($fila['nombre'] . ' ' . $fila['apellidos']) ?></h5><br>
+            <div id="center-image">
+                <article>
+                    <h1 id = "head"><?php echo ($fila['titulo']) ?></h1><br>
+                    <div id="centrar-perfil-autor">
+                        <div id="perfil-author">
+                            <a href = "./autor.php?id=<?php echo $fila['id_usuario'] ?>"><img src="./imagenes/<?php echo ($fila['foto']) ?>" class="autor" width = "75px" heigth = "75px"/><a>
+                            <h5><?php echo ($fila['nombre'] . ' ' . $fila['apellidos']) ?></h5><br>
+                        </div>
                     </div>
-                </div>
-                <p><?php echo ($fila['contenido']) ?></p><br><br>    
-            </article>
-            <article>
-                <div id="imagen">
-                    <img id = "img-Articulo" src="./Resources/Noticias/<?php echo ($fila['titulo']) ?>/<?php echo ($fila['imagen']) ?>"  width = "700px" heigth = "700px">
-                </div><br>
-            </article>
+                    <p><?php echo ($fila['contenido']) ?></p><br><br>    
+                </article>
+                <article>
+                    <div id="imagen">
+                        <img id = "img-Articulo" src="./Resources/Noticias/<?php echo ($fila['titulo']) ?>/<?php echo ($fila['imagen']) ?>"  width = "80%" heigth = "80%">
+                    </div><br>
+                </article>
+            </div>
         </section>
         
     </div>

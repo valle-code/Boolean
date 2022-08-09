@@ -5,8 +5,6 @@
   background-repeat: no-repeat;
 }
 
-
-
 #container {
   background-image: url(./imagenes/website-background-image-size-psd-vector-photo_waifu2x_art_noise3_scale_tta_1.png);
   display: flex;
@@ -514,10 +512,15 @@ input[type="password"] {
   outline: none;
 }
 
+#title-wrap{
+  font-size: 1vw;
+}
+
 .wrapper{
   display: inline-block;
   cursor: pointer;
-  width: 200px;
+  font-size: 0.8vw;
+  width: 10vw;
   height: 300px;  
   border-radius: 15px;
   padding: 15px;
@@ -870,7 +873,7 @@ section {
   background-color: rgba(255, 255, 255, 0.318);
   padding-top: 2%;
   padding-left: 5%;
-  padding-right: 5%;
+  
   width: 80%;
 }
 
@@ -1023,6 +1026,11 @@ th{
 
 #user{
   border-radius: 100%;
+}
+
+#center-image{
+  display: flex;
+  flex-direction: column;
 }
 
 

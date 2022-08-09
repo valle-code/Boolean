@@ -17,7 +17,7 @@ if (isset($_POST['login'])) {
                 session_start();
                 $_SESSION['email'] = $email;
                 $_SESSION['psw'] = $psw;
-                Header("Location: ../Usuario/index.php");
+                Header("Location: ../index.php");
             } else {
                 Header("Location: ../Usuario/baneado.html");
             }

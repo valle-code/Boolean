@@ -26,7 +26,7 @@ if (isset($_POST['buscar'])) {
     <!--Barra de navegación-->
     <div class="contenedor">
         <div class="navegacion">
-          <a href = "./index.php"><img src="./imagenes/LogoDani-02.png" class="logo"/></a>
+          <a href = "../index.php"><img src="./imagenes/LogoDani-02.png" class="logo"/></a>
             <nav>
                 <ul>
                     <li class="barra">
@@ -60,7 +60,7 @@ if (isset($_POST['buscar'])) {
                         ?>
                             <a href = "./articulo.php?id=<?php echo $fila['id'] ?>">
                                 <div class="wrapper" style="background-image: url('Resources/Noticias/<?php echo($fila['titulo'])?>/<?php echo($fila['imagen'])?>')">
-                                <h5><?php echo($fila['titulo']) ?></h5>
+                                <h5 id = "title-wrap"><?php echo($fila['titulo']) ?></h5>
                                 <p>
                                     <?php echo($fila['descripcion']) ?>
                                 </p>
