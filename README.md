@@ -4,7 +4,7 @@ Social space in which people can upload article pieces, news etc.
 ## How to use
 You will need to download Xampp <a href = "https://www.apachefriends.org/es/index.html">here</a> and install MySQL and Apache in Xampp. 
 
-Now you will need to look for the follwing Directory in your files:
+Now you will need to look for the following Directory in your files:
 
 <pre>C:\xampp\htdocs</pre>
 
@@ -16,7 +16,7 @@ Once you've downloaded the project, you have to start both MySQL and Apache serv
 
 <pre>http://localhost/phpmyadmin/</pre>
 
-In that link you have to import my .sql file inside "Datos" folder from my project you've already downloaded. After doing that you will look for this link:
+In that link you have to import my <strong>boolean.sql</strong> file inside "Datos" folder from my project you've already downloaded. After doing that you will look for this link in your browser:
 
 <pre>http://localhost/boolean/index.php</pre>
 
