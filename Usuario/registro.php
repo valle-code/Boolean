@@ -15,10 +15,8 @@
   <div id="container">
 
     <div class="padre">
-<<<<<<< HEAD
+
       <a title="atras" href="../index.php"><img src="./imagenes/icons8-atrás-100.png" alt="atrás"/></a>
-=======
-      <a title="atras" href="./index.php"><img src="./imagenes/icons8-atrás-100.png" alt="atrás" /></a>
       <div id="caja">
         <form action="../Logica/controladorRegistro.php" method="post" id="registro">
           <br>

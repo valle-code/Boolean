@@ -23,16 +23,11 @@ $resultado = mysqli_query($conexion, $sql);
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-<<<<<<< HEAD:index.php
     <link rel="stylesheet" type="text/css" href="./Usuario/estilos.css" title="style" />
     <!-- normalize css -->
 
     <!--favicon-->
     <link rel="shortcut icon" href="./Usuario/imagenes/favicon.png" type="image/x-icon">
-=======
-    <link rel="stylesheet" type="text/css" href="estilos.css" title="style" />
-    <link rel="shortcut icon" href="./imagenes/favicon.png" type="image/x-icon">
->>>>>>> 2899530752b28e3ef571be40d3020ab555a7999f:Usuario/index.php
     <title>Home</title>
 </head>
 
@@ -74,11 +69,7 @@ $resultado = mysqli_query($conexion, $sql);
             <!-- identificación de la cuenta en index -->
             <div class="identificacion">
                 <?php if ($email != '') { ?>
-<<<<<<< HEAD:index.php
                     <a href="./Usuario/perfil.php"><img src="./Usuario/imagenes/<?php echo $row_user['foto']; ?>" id="imgId" heigth="75px" width="75px" /></a>
-=======
-                    <a href = "./perfil.php"><img src="./imagenes/<?php echo $row_user['foto']; ?>" id="imgId" heigth = "50px" width = "50px"/></a>
->>>>>>> 2899530752b28e3ef571be40d3020ab555a7999f:Usuario/index.php
                 <?php } ?>
             </div>
         </div>
