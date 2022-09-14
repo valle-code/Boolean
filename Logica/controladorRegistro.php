@@ -21,14 +21,7 @@ if (isset($_POST['enviar'])) {
                 $sql = "INSERT INTO usuario (nombre, apellidos, email, contraseña) VALUES ('$nombre','$apellidos','$email','$hash')";
                 $resultado = mysqli_query($conexion, $sql) or die(mysqli_error($conexion));
                 if ($resultado) {
-<<<<<<< HEAD
                    header("Location: ../index.php");
-=======
-                   session_start();
-                   $_SESSION['email'] = $email;
-                   $_SESSION['psw'] = $psw;
-                   header("Location: ../Usuario/index.php");
->>>>>>> 2899530752b28e3ef571be40d3020ab555a7999f
                 } else {
                    header("Location: ../Usuario/error404.html");
                 }
