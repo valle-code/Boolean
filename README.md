@@ -17,11 +17,13 @@ git clone https://github.com/valle-code/Boolean
 ```
 Once you've downloaded the project, you have to start both MySQL and Apache services in Xampp. Then you will look for this link in your favorite browser (Chrome, Firefox...):
 
-<pre>http://localhost/phpmyadmin/</pre>
+http://localhost/phpmyadmin/</pre>
 
 In that link you have to import my <strong>boolean.sql</strong> file inside "Datos" folder from my project you've already downloaded. After doing that you will look for this link in your browser:
 
-```http://localhost/boolean/index.php```
+```
+http://localhost/boolean/index.php
+```
 
 Now you should see the main page and be ready to go.
 
