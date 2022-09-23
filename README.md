@@ -6,19 +6,22 @@ You will need to download Xampp <a href = "https://www.apachefriends.org/es/inde
 
 Now you will need to look for the following Directory in your files:
 
-<pre>C:\xampp\htdocs</pre>
+```
+C:\xampp\htdocs
+```
 
 Once done, you will download this repository in that folder:
 
-<pre>git clone https://github.com/valle-code/Boolean</pre>
-
+```
+git clone https://github.com/valle-code/Boolean
+```
 Once you've downloaded the project, you have to start both MySQL and Apache services in Xampp. Then you will look for this link in your favorite browser (Chrome, Firefox...):
 
 <pre>http://localhost/phpmyadmin/</pre>
 
 In that link you have to import my <strong>boolean.sql</strong> file inside "Datos" folder from my project you've already downloaded. After doing that you will look for this link in your browser:
 
-<pre>http://localhost/boolean/index.php</pre>
+```http://localhost/boolean/index.php```
 
 Now you should see the main page and be ready to go.
 
